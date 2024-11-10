@@ -1,0 +1,16 @@
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Infrastructure/bin/Debug/net8.0/TaskManagerAPI.Infrastructure.deps.json
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Infrastructure/bin/Debug/net8.0/TaskManagerAPI.Infrastructure.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Infrastructure/bin/Debug/net8.0/TaskManagerAPI.Infrastructure.pdb
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Infrastructure/bin/Debug/net8.0/TaskManagerAPI.Core.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Infrastructure/bin/Debug/net8.0/TaskManagerAPI.Core.pdb
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Infrastructure/obj/Debug/net8.0/TaskManagerAPI.Infrastructure.csproj.AssemblyReference.cache
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Infrastructure/obj/Debug/net8.0/TaskManagerAPI.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Infrastructure/obj/Debug/net8.0/TaskManagerAPI.Infrastructure.AssemblyInfoInputs.cache
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Infrastructure/obj/Debug/net8.0/TaskManagerAPI.Infrastructure.AssemblyInfo.cs
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Infrastructure/obj/Debug/net8.0/TaskManagerAPI.Infrastructure.csproj.CoreCompileInputs.cache
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Infrastructure/obj/Debug/net8.0/TaskManagerAPI.Infrastructure.sourcelink.json
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Infrastructure/obj/Debug/net8.0/TaskMana.A1BA0E02.Up2Date
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Infrastructure/obj/Debug/net8.0/TaskManagerAPI.Infrastructure.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Infrastructure/obj/Debug/net8.0/refint/TaskManagerAPI.Infrastructure.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Infrastructure/obj/Debug/net8.0/TaskManagerAPI.Infrastructure.pdb
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Infrastructure/obj/Debug/net8.0/ref/TaskManagerAPI.Infrastructure.dll

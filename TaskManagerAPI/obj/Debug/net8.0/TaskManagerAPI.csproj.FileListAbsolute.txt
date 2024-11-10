@@ -87,3 +87,9 @@
 /Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/TaskManagerAPI.pdb
 /Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/TaskManagerAPI.genruntimeconfig.cache
 /Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/ref/TaskManagerAPI.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/TaskManagerAPI.Core.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/TaskManagerAPI.Infrastructure.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/TaskManagerAPI.Services.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/TaskManagerAPI.Core.pdb
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/TaskManagerAPI.Infrastructure.pdb
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/TaskManagerAPI.Services.pdb

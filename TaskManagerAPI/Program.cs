@@ -1,21 +1,32 @@
-using Microsoft.Extensions.Options;
-using TaskManagerAPI.Configurations;
-using TaskManagerAPI.DataAccess;
-using TaskManagerAPI.Interfaces;
-using TaskManagerAPI.Mappers;
-using TaskManagerAPI.Middlewares;
-using TaskManagerAPI.Repositories;
-using TaskManagerAPI.Services;
-using Npgsql;
 using System.Data;
 using System.Reflection;
+using System.Text.Json.Serialization;
+using Microsoft.Extensions.Options;
+using Microsoft.OpenApi.Models;
+using Npgsql;
+using TaskManagerAPI.Core.Mappers;
+using TaskManagerAPI.Infrastructure.DataAccess;
+using TaskManagerAPI.Infrastructure.Interfaces;
+using TaskManagerAPI.Infrastructure.Repositories;
+using TaskManagerAPI.Middlewares;
+using TaskManagerAPI.Services.Interfaces;
+using TaskManagerAPI.Services.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSwaggerGen(options =>
 {
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "TaskManagerAPI", Version = "v1" });
+    options.UseInlineDefinitionsForEnums();
 });
+
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    });
+
 // Configuração do banco de dados
 builder.Services.Configure<DatabaseConfiguration>(builder.Configuration.GetSection("DatabaseConfiguration"));
 
@@ -36,7 +47,7 @@ builder.Services.AddScoped<ISqlDataAccess, SqlDataAccess>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ITodoTaskService, TodoTaskService>();
 builder.Services.AddScoped<IHistoryService, HistoryService>();
-
+builder.Services.AddScoped<IProjectService, ProjectService>();
 // Configuração do AutoMapper
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
@@ -47,6 +58,12 @@ builder.Services.AddSwaggerGen();
 
 // Construindo a aplicação
 var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
 // Middlewares personalizados
 app.UseMiddleware<ExceptionHandlingMiddleware>();

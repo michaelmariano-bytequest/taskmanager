@@ -6,80 +6,55 @@
     <members>
         <member name="M:TaskManagerAPI.Controllers.HistoryController.GetHistoryByTaskId(System.Int32)">
             <summary>
-            Retrieve the history of changes for a specific task.
+                Retrieve the history of changes for a specific task.
             </summary>
             <param name="taskId">The ID of the task.</param>
             <returns>A list of history records for the specified task.</returns>
         </member>
-        <member name="M:TaskManagerAPI.Controllers.ProjectController.GetProjectById(System.Int32)">
+        <member name="M:TaskManagerAPI.Controllers.TodoTaskController.GetTasksByProjectId(System.Int32)">
             <summary>
-            Retrieve a project by its unique ID.
+            Retrieve all tasks by projectId.
             </summary>
-            <param name="id">The ID of the project.</param>
-            <returns>The project details.</returns>
-        </member>
-        <member name="M:TaskManagerAPI.Controllers.ProjectController.GetProjectsByUserId(System.Int32)">
-            <summary>
-            Retrieve all projects for a specific user.
-            </summary>
-            <param name="userId">The ID of the user.</param>
-        </member>
-        <member name="M:TaskManagerAPI.Controllers.ProjectController.CreateProject(TaskManagerAPI.Entities.Project)">
-            <summary>
-            Create a new project.
-            </summary>
-            <param name="project">The project details to create.</param>
-        </member>
-        <member name="M:TaskManagerAPI.Controllers.ProjectController.UpdateProject(System.Int32,TaskManagerAPI.Entities.Project)">
-            <summary>
-            Update an existing project.
-            </summary>
-            <param name="id">The ID of the project to update.</param>
-            <param name="project">The updated project details.</param>
-        </member>
-        <member name="M:TaskManagerAPI.Controllers.ProjectController.DeleteProject(System.Int32)">
-            <summary>
-            Delete a project by ID.
-            </summary>
-            <param name="id">The ID of the project to delete.</param>
+            <param name="projectId">The projectId of the related project.</param>
+            <returns>The task details.</returns>
         </member>
         <member name="M:TaskManagerAPI.Controllers.TodoTaskController.GetTodoTaskById(System.Int32)">
             <summary>
-            Retrieve a task by its unique ID.
+                Retrieve a task by its unique ID.
             </summary>
             <param name="id">The ID of the task.</param>
             <returns>The task details.</returns>
         </member>
-        <member name="M:TaskManagerAPI.Controllers.TodoTaskController.CreateTodoTask(TaskManagerAPI.Entities.TodoTask)">
+        <member name="M:TaskManagerAPI.Controllers.TodoTaskController.CreateTodoTask(TaskManagerAPI.Core.Entities.TodoTask)">
             <summary>
-            Create a new task.
+                Create a new task.
             </summary>
             <param name="task">The details of the task to create.</param>
             <returns>The newly created task details.</returns>
         </member>
-        <member name="M:TaskManagerAPI.Controllers.TodoTaskController.UpdateTodoTask(System.Int32,TaskManagerAPI.Entities.TodoTask)">
+        <member name="M:TaskManagerAPI.Controllers.TodoTaskController.UpdateTodoTask(System.Int32,TaskManagerAPI.Core.Entities.TodoTask)">
             <summary>
-            Update an existing task.
+                Update an existing task.
             </summary>
             <param name="id">The ID of the task to update.</param>
             <param name="task">The updated task details.</param>
         </member>
         <member name="M:TaskManagerAPI.Controllers.TodoTaskController.DeleteTodoTask(System.Int32)">
             <summary>
-            Delete a task by ID.
+                Delete a task by ID.
             </summary>
             <param name="id">The ID of the task to delete.</param>
         </member>
         <member name="M:TaskManagerAPI.Controllers.UserController.GetUserById(System.Int32)">
             <summary>
-            Retrieve a user by their unique ID.
+                Retrieve a user by their unique ID.
             </summary>
             <param name="id">The ID of the user.</param>
             <returns>The user details.</returns>
         </member>
-        <member name="M:TaskManagerAPI.Controllers.UserController.CreateUser(TaskManagerAPI.DTOs.CreateUserDTO)">
+        <member name="M:TaskManagerAPI.Controllers.UserController.CreateUser(TaskManagerAPI.Core.DTOs.CreateUserDTO)">
             <summary>
-            Create a new user.
+                Create a new user.
             </summary>
             <param name="createUserDto">The user details to create.</param>
             <returns>The newly created user details.</returns>

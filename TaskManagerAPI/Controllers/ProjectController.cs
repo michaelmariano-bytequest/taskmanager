@@ -1,79 +1,82 @@
 using Microsoft.AspNetCore.Mvc;
-using TaskManagerAPI.DTOs;
-using TaskManagerAPI.Entities;
-using TaskManagerAPI.Interfaces;
+using TaskManagerAPI.Core.DTOs;
+using TaskManagerAPI.Core.Entities;
+using TaskManagerAPI.Services.Interfaces;
 
 namespace TaskManagerAPI.Controllers
 {
-    [ApiController]
     [Route("api/[controller]")]
+    [ApiController]
     public class ProjectController : ControllerBase
     {
-        private readonly IProjectRepository _projectRepository;
+        private readonly IProjectService _projectService;
 
-        public ProjectController(IProjectRepository projectRepository)
+        public ProjectController(IProjectService projectService)
         {
-            _projectRepository = projectRepository;
+            _projectService = projectService;
         }
 
-        /// <summary>
-        /// Retrieve a project by its unique ID.
-        /// </summary>
-        /// <param name="id">The ID of the project.</param>
-        /// <returns>The project details.</returns>
         [HttpGet("{id}")]
-        public async Task<ActionResult<Project>> GetProjectById(int id)
+        public async Task<IActionResult> GetProjectById(int id)
         {
-            var project = await _projectRepository.GetProjectByIdAsync(id);
-            if (project == null)
-                return NotFound();
-            return Ok(project);
+            var result = await _projectService.GetProjectByIdAsync(id);
+
+            if (!result.IsSuccess)
+            {
+                return NotFound(new { Message = result.ErrorMessage });
+            }
+
+            return Ok(result.Value);
         }
 
-        /// <summary>
-        /// Retrieve all projects for a specific user.
-        /// </summary>
-        /// <param name="userId">The ID of the user.</param>
         [HttpGet("user/{userId}")]
-        public async Task<ActionResult<IEnumerable<Project>>> GetProjectsByUserId(int userId)
+        public async Task<IActionResult> GetProjectsByUserId(int userId)
         {
-            var projects = await _projectRepository.GetProjectsByUserIdAsync(userId);
-            return Ok(projects);
+            var result = await _projectService.GetProjectsByUserIdAsync(userId);
+            
+            if (!result.IsSuccess)
+                return NotFound(new { Message = result.ErrorMessage });
+            else
+                return Ok(result.Value);
         }
 
-        /// <summary>
-        /// Create a new project.
-        /// </summary>
-        /// <param name="project">The project details to create.</param>
         [HttpPost]
-        public async Task<IActionResult> CreateProject(Project project)
+        public async Task<IActionResult> CreateProject([FromBody] Project project)
         {
-            await _projectRepository.CreateProjectAsync(project);
+            var result = await _projectService.CreateProjectAsync(project);
+
+            if (!result.IsSuccess)
+            {
+                return BadRequest(new { Message = result.ErrorMessage });
+            }
+
             return CreatedAtAction(nameof(GetProjectById), new { id = project.Id }, project);
         }
 
-        /// <summary>
-        /// Update an existing project.
-        /// </summary>
-        /// <param name="id">The ID of the project to update.</param>
-        /// <param name="project">The updated project details.</param>
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateProject(int id, Project project)
+        public async Task<IActionResult> UpdateProject(int id, [FromBody] Project project)
         {
-            if (id != project.Id)
-                return BadRequest();
-            await _projectRepository.UpdateProjectAsync(project);
+            project.Id = id; // Ensures the ID in the route is used
+            var result = await _projectService.UpdateProjectAsync(project);
+
+            if (!result.IsSuccess)
+            {
+                return NotFound(new { Message = result.ErrorMessage });
+            }
+
             return NoContent();
         }
 
-        /// <summary>
-        /// Delete a project by ID.
-        /// </summary>
-        /// <param name="id">The ID of the project to delete.</param>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProject(int id)
         {
-            await _projectRepository.DeleteProjectAsync(id);
+            var result = await _projectService.DeleteProjectAsync(id);
+
+            if (!result.IsSuccess)
+            {
+                return BadRequest(new { Message = result.ErrorMessage });
+            }
+
             return NoContent();
         }
     }

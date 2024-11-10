@@ -1,44 +1,41 @@
-using Microsoft.AspNetCore.Http;
-using System;
 using System.Net;
-using System.Threading.Tasks;
+using System.Text.Json;
 
-namespace TaskManagerAPI.Middlewares
+namespace TaskManagerAPI.Middlewares;
+
+public class ExceptionHandlingMiddleware
 {
-    public class ExceptionHandlingMiddleware
+    private readonly RequestDelegate _next;
+
+    public ExceptionHandlingMiddleware(RequestDelegate next)
     {
-        private readonly RequestDelegate _next;
+        _next = next;
+    }
 
-        public ExceptionHandlingMiddleware(RequestDelegate next)
+    public async Task InvokeAsync(HttpContext context)
+    {
+        try
         {
-            _next = next;
+            await _next(context); // Passa para o próximo middleware
         }
-
-        public async Task InvokeAsync(HttpContext context)
+        catch (Exception ex)
         {
-            try
-            {
-                await _next(context); // Passa para o próximo middleware
-            }
-            catch (Exception ex)
-            {
-                await HandleExceptionAsync(context, ex);
-            }
+            await HandleExceptionAsync(context, ex);
         }
+    }
 
-        private static Task HandleExceptionAsync(HttpContext context, Exception exception)
+    private static Task HandleExceptionAsync(HttpContext context, Exception exception)
+    {
+        context.Response.ContentType = "application/json";
+        context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+
+        var result = new
         {
-            context.Response.ContentType = "application/json";
-            context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+            context.Response.StatusCode,
+            Message = "An unexpected error occurred. Please try again later.",
+            Detailed = exception.Message //TODO Remova em produção para não expor detalhes
+        };
 
-            var result = new
-            {
-                StatusCode = context.Response.StatusCode,
-                Message = "An unexpected error occurred. Please try again later.",
-                Detailed = exception.Message //TODO Remova em produção para não expor detalhes
-            };
-
-            return context.Response.WriteAsync(System.Text.Json.JsonSerializer.Serialize(result));
-        }
+        return context.Response.WriteAsync(JsonSerializer.Serialize(result));
     }
 }

@@ -1,0 +1,13 @@
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Core/bin/Debug/net8.0/TaskManagerAPI.Core.deps.json
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Core/bin/Debug/net8.0/TaskManagerAPI.Core.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Core/bin/Debug/net8.0/TaskManagerAPI.Core.pdb
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Core/obj/Debug/net8.0/TaskManagerAPI.Core.csproj.AssemblyReference.cache
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Core/obj/Debug/net8.0/TaskManagerAPI.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Core/obj/Debug/net8.0/TaskManagerAPI.Core.AssemblyInfoInputs.cache
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Core/obj/Debug/net8.0/TaskManagerAPI.Core.AssemblyInfo.cs
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Core/obj/Debug/net8.0/TaskManagerAPI.Core.csproj.CoreCompileInputs.cache
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Core/obj/Debug/net8.0/TaskManagerAPI.Core.sourcelink.json
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Core/obj/Debug/net8.0/TaskManagerAPI.Core.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Core/obj/Debug/net8.0/refint/TaskManagerAPI.Core.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Core/obj/Debug/net8.0/TaskManagerAPI.Core.pdb
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Core/obj/Debug/net8.0/ref/TaskManagerAPI.Core.dll

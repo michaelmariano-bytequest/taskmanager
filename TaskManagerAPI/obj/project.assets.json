@@ -345,6 +345,49 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "TaskManagerAPI.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "AutoMapper": "13.0.1"
+        },
+        "compile": {
+          "bin/placeholder/TaskManagerAPI.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TaskManagerAPI.Core.dll": {}
+        }
+      },
+      "TaskManagerAPI.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "TaskManagerAPI.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TaskManagerAPI.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TaskManagerAPI.Infrastructure.dll": {}
+        }
+      },
+      "TaskManagerAPI.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "AutoMapper": "13.0.1",
+          "BCrypt.Net-Next": "4.0.3",
+          "TaskManagerAPI.Core": "1.0.0",
+          "TaskManagerAPI.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TaskManagerAPI.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TaskManagerAPI.Services.dll": {}
+        }
       }
     }
   },
@@ -1131,6 +1174,21 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "TaskManagerAPI.Core/1.0.0": {
+      "type": "project",
+      "path": "../TaskManagerAPI.Core/TaskManagerAPI.Core.csproj",
+      "msbuildProject": "../TaskManagerAPI.Core/TaskManagerAPI.Core.csproj"
+    },
+    "TaskManagerAPI.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../TaskManagerAPI.Infrastructure/TaskManagerAPI.Infrastructure.csproj",
+      "msbuildProject": "../TaskManagerAPI.Infrastructure/TaskManagerAPI.Infrastructure.csproj"
+    },
+    "TaskManagerAPI.Services/1.0.0": {
+      "type": "project",
+      "path": "../TaskManagerAPI.Services/TaskManagerAPI.Services.csproj",
+      "msbuildProject": "../TaskManagerAPI.Services/TaskManagerAPI.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1141,7 +1199,10 @@
       "Npgsql >= 8.0.5",
       "Swashbuckle.AspNetCore >= 6.4.0",
       "Swashbuckle.AspNetCore.Annotations >= 6.9.0",
-      "System.IdentityModel.Tokens.Jwt >= 8.2.0"
+      "System.IdentityModel.Tokens.Jwt >= 8.2.0",
+      "TaskManagerAPI.Core >= 1.0.0",
+      "TaskManagerAPI.Infrastructure >= 1.0.0",
+      "TaskManagerAPI.Services >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1168,7 +1229,17 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Core/TaskManagerAPI.Core.csproj": {
+              "projectPath": "/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Core/TaskManagerAPI.Core.csproj"
+            },
+            "/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Infrastructure/TaskManagerAPI.Infrastructure.csproj": {
+              "projectPath": "/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Infrastructure/TaskManagerAPI.Infrastructure.csproj"
+            },
+            "/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Services/TaskManagerAPI.Services.csproj": {
+              "projectPath": "/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Services/TaskManagerAPI.Services.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

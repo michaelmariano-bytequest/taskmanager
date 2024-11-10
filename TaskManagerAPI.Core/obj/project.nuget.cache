@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "k9glWYQ7Z50=",
+  "success": true,
+  "projectFilePath": "/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI.Core/TaskManagerAPI.Core.csproj",
+  "expectedPackageFiles": [
+    "/Users/michaelmariano/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
+    "/Users/michaelmariano/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "/Users/michaelmariano/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "/Users/michaelmariano/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/Users/michaelmariano/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

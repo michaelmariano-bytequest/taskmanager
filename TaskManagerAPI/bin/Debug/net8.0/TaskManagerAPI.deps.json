@@ -14,7 +14,10 @@
           "Npgsql": "8.0.5",
           "Swashbuckle.AspNetCore": "6.4.0",
           "Swashbuckle.AspNetCore.Annotations": "6.9.0",
-          "System.IdentityModel.Tokens.Jwt": "8.2.0"
+          "System.IdentityModel.Tokens.Jwt": "8.2.0",
+          "TaskManagerAPI.Core": "1.0.0",
+          "TaskManagerAPI.Infrastructure": "1.0.0",
+          "TaskManagerAPI.Services": "1.0.0"
         },
         "runtime": {
           "TaskManagerAPI.dll": {}
@@ -196,7 +199,35 @@
           }
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/6.0.0": {}
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
+      "TaskManagerAPI.Core/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "13.0.1"
+        },
+        "runtime": {
+          "TaskManagerAPI.Core.dll": {}
+        }
+      },
+      "TaskManagerAPI.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "TaskManagerAPI.Core": "1.0.0"
+        },
+        "runtime": {
+          "TaskManagerAPI.Infrastructure.dll": {}
+        }
+      },
+      "TaskManagerAPI.Services/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "13.0.1",
+          "BCrypt.Net-Next": "4.0.3",
+          "TaskManagerAPI.Core": "1.0.0",
+          "TaskManagerAPI.Infrastructure": "1.0.0"
+        },
+        "runtime": {
+          "TaskManagerAPI.Services.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -358,6 +389,21 @@
       "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
       "path": "system.runtime.compilerservices.unsafe/6.0.0",
       "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    },
+    "TaskManagerAPI.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TaskManagerAPI.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TaskManagerAPI.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
