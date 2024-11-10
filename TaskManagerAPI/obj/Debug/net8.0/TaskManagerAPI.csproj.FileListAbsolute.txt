@@ -1,0 +1,89 @@
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/bin/Debug/net8.0/appsettings.Development.json
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/bin/Debug/net8.0/appsettings.json
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/bin/Debug/net8.0/TaskManagerAPI
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/bin/Debug/net8.0/TaskManagerAPI.deps.json
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/bin/Debug/net8.0/TaskManagerAPI.runtimeconfig.json
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/bin/Debug/net8.0/TaskManagerAPI.dll
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/bin/Debug/net8.0/TaskManagerAPI.pdb
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/obj/Debug/net8.0/TaskManagerAPI.csproj.AssemblyReference.cache
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/obj/Debug/net8.0/TaskManagerAPI.GeneratedMSBuildEditorConfig.editorconfig
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/obj/Debug/net8.0/TaskManagerAPI.AssemblyInfoInputs.cache
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/obj/Debug/net8.0/TaskManagerAPI.AssemblyInfo.cs
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/obj/Debug/net8.0/TaskManagerAPI.csproj.CoreCompileInputs.cache
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/obj/Debug/net8.0/TaskManagerAPI.MvcApplicationPartsAssemblyInfo.cs
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/obj/Debug/net8.0/TaskManagerAPI.MvcApplicationPartsAssemblyInfo.cache
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/obj/Debug/net8.0/staticwebassets.build.json
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/obj/Debug/net8.0/staticwebassets.development.json
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/obj/Debug/net8.0/staticwebassets/msbuild.TaskManagerAPI.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/obj/Debug/net8.0/staticwebassets/msbuild.build.TaskManagerAPI.props
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.TaskManagerAPI.props
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.TaskManagerAPI.props
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/obj/Debug/net8.0/staticwebassets.pack.json
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/obj/Debug/net8.0/scopedcss/bundle/TaskManagerAPI.styles.css
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/obj/Debug/net8.0/TaskMana.7A261BF7.Up2Date
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/obj/Debug/net8.0/TaskManagerAPI.dll
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/obj/Debug/net8.0/refint/TaskManagerAPI.dll
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/obj/Debug/net8.0/TaskManagerAPI.pdb
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/obj/Debug/net8.0/TaskManagerAPI.genruntimeconfig.cache
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/obj/Debug/net8.0/ref/TaskManagerAPI.dll
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/bin/Debug/net8.0/AutoMapper.dll
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/bin/Debug/net8.0/BCrypt.Net-Next.dll
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/bin/Debug/net8.0/Dapper.dll
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/bin/Debug/net8.0/Microsoft.Bcl.TimeProvider.dll
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/bin/Debug/net8.0/Npgsql.dll
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.Annotations.dll
+/Users/michaelmariano/TestProjects/TaskManagerAPI/TaskManagerAPI/bin/Debug/net8.0/TaskManagerAPI.xml
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/appsettings.Development.json
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/appsettings.json
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/TaskManagerAPI
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/TaskManagerAPI.xml
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/TaskManagerAPI.deps.json
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/TaskManagerAPI.runtimeconfig.json
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/TaskManagerAPI.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/TaskManagerAPI.pdb
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/AutoMapper.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/BCrypt.Net-Next.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/Dapper.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/Microsoft.Bcl.TimeProvider.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/Npgsql.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.Annotations.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/TaskManagerAPI.csproj.AssemblyReference.cache
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/TaskManagerAPI.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/TaskManagerAPI.AssemblyInfoInputs.cache
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/TaskManagerAPI.AssemblyInfo.cs
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/TaskManagerAPI.csproj.CoreCompileInputs.cache
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/TaskManagerAPI.MvcApplicationPartsAssemblyInfo.cs
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/TaskManagerAPI.MvcApplicationPartsAssemblyInfo.cache
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/TaskManagerAPI.sourcelink.json
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/staticwebassets.build.json
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/staticwebassets.development.json
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/staticwebassets/msbuild.TaskManagerAPI.Microsoft.AspNetCore.StaticWebAssets.props
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/staticwebassets/msbuild.build.TaskManagerAPI.props
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.TaskManagerAPI.props
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.TaskManagerAPI.props
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/staticwebassets.pack.json
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/scopedcss/bundle/TaskManagerAPI.styles.css
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/TaskMana.7A261BF7.Up2Date
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/TaskManagerAPI.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/refint/TaskManagerAPI.dll
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/TaskManagerAPI.pdb
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/TaskManagerAPI.genruntimeconfig.cache
+/Volumes/Sandisk Extreme/Projects/ByteQuest/taskmanager/TaskManagerAPI/obj/Debug/net8.0/ref/TaskManagerAPI.dll
