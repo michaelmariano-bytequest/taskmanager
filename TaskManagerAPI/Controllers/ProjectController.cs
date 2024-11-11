@@ -1,10 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using TaskManagerAPI.Core.Common;
-using TaskManagerAPI.Core.DTOs;
 using TaskManagerAPI.Core.Entities;
 using TaskManagerAPI.Services.Interfaces;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace TaskManagerAPI.Controllers
 {

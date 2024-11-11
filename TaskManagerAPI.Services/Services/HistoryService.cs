@@ -1,7 +1,6 @@
 using System.Reflection;
 using System.Text;
 using TaskManagerAPI.Core.Common;
-using TaskManagerAPI.Core.DTOs;
 using TaskManagerAPI.Core.Entities;
 using TaskManagerAPI.Infrastructure.Interfaces;
 using TaskManagerAPI.Services.Interfaces;

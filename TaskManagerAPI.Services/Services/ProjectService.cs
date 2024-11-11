@@ -1,5 +1,4 @@
 using TaskManagerAPI.Core.Common;
-using TaskManagerAPI.Core.DTOs;
 using TaskManagerAPI.Core.Entities;
 using TaskManagerAPI.Core.Enums;
 using TaskManagerAPI.Infrastructure.Interfaces;
