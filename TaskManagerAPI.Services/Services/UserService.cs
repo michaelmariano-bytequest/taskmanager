@@ -23,11 +23,12 @@ public class UserService : IUserService
         return _mapper.Map<UserDTO>(user);
     }
 
-    public async Task CreateUserAsync(CreateUserDTO createUserDto)
+    public async Task<int> CreateUserAsync(CreateUserDTO createUserDto)
     {
         var user = _mapper.Map<User>(createUserDto);
         user.PasswordHash = HashPassword(createUserDto.Password);
-        await _userRepository.CreateUserAsync(user);
+        
+        return await _userRepository.CreateUserAsync(user);
     }
 
     private string HashPassword(string password)

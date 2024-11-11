@@ -25,10 +25,10 @@ public class UserRepository : IUserRepository
         return await _dataAccess.QuerySingleAsync<User>(sql, parameters);
     }
 
-    public async Task CreateUserAsync(User user)
+    public async Task<int> CreateUserAsync(User user)
     {
         var sql = "INSERT INTO task_manager.user (name, email, password_hash, created_at) " +
-                  "VALUES (@Name, @Email, @PasswordHash, @CreatedAt)";
+                  "VALUES (@Name, @Email, @PasswordHash, @CreatedAt) RETURNING id;";
 
         var parameters = new DynamicParameters();
         parameters.Add("Name", user.Name, DbType.String);
@@ -36,6 +36,6 @@ public class UserRepository : IUserRepository
         parameters.Add("PasswordHash", user.PasswordHash, DbType.String);
         parameters.Add("CreatedAt", user.CreatedAt, DbType.DateTime);
 
-        await _dataAccess.ExecuteAsync(sql, parameters);
+        return await _dataAccess.QuerySingleAsync<int>(sql, parameters);
     }
 }

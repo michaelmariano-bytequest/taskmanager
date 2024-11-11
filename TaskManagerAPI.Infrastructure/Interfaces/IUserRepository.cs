@@ -5,5 +5,5 @@ namespace TaskManagerAPI.Infrastructure.Interfaces;
 public interface IUserRepository
 {
     Task<User> GetUserByIdAsync(int id);
-    Task CreateUserAsync(User user);
+    Task<int> CreateUserAsync(User user);
 }
