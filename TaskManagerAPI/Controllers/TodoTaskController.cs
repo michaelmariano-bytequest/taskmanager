@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using TaskManagerAPI.Core.DTOs;
 using TaskManagerAPI.Core.Entities;
@@ -10,10 +11,11 @@ namespace TaskManagerAPI.Controllers;
 public class TodoTaskController : ControllerBase
 {
     private readonly ITodoTaskService _todoTaskService;
-
-    public TodoTaskController(ITodoTaskService todoTaskService)
+    private readonly IMapper _mapper;
+    public TodoTaskController(ITodoTaskService todoTaskService, IMapper mapper)
     {
         _todoTaskService = todoTaskService;
+        _mapper = mapper;
     }
 
     /// <summary>
@@ -22,7 +24,7 @@ public class TodoTaskController : ControllerBase
     /// <param name="projectId">The projectId of the related project.</param>
     /// <returns>The task details.</returns>
     [HttpGet("projects/{projectId}/tasks")]
-    public async Task<ActionResult<IEnumerable<TodoTaskDTO>>> GetTasksByProjectId(int projectId)
+    public async Task<ActionResult<IEnumerable<TodoTaskCreateDTO>>> GetTasksByProjectId(int projectId)
     {
         var tasks = await _todoTaskService.GetTasksByProjectIdAsync(projectId);
         
@@ -38,7 +40,7 @@ public class TodoTaskController : ControllerBase
     /// <param name="id">The ID of the task.</param>
     /// <returns>The task details.</returns>
     [HttpGet("{id}")]
-    public async Task<ActionResult<TodoTaskDTO>> GetTodoTaskById(int id)
+    public async Task<ActionResult<TodoTaskCreateDTO>> GetTodoTaskById(int id)
     {
         var task = await _todoTaskService.GetTodoTaskByIdAsync(id);
         if (task == null)
@@ -63,16 +65,19 @@ public class TodoTaskController : ControllerBase
     }
 
     /// <summary>
-    ///     Update an existing task.
+    ///     Update an existing task. The task priority parameter can't be updated. 
     /// </summary>
     /// <param name="id">The ID of the task to update.</param>
-    /// <param name="task">The updated task details.</param>
+    /// <param name="taskCreate">The updated task details.</param>
     [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateTodoTask(int id, TodoTask task)
+    public async Task<IActionResult> UpdateTodoTask(int id, TodoTaskUpdateDTO taskCreate)
     {
-        if (id != task.Id)
+        if (id != taskCreate.Id)
             return BadRequest();
-        await _todoTaskService.UpdateTodoTaskAsync(task);
+        
+        var todoTask = _mapper.Map<TodoTask>(taskCreate);
+        await _todoTaskService.UpdateTodoTaskAsync(todoTask);
+        
         return NoContent();
     }
 

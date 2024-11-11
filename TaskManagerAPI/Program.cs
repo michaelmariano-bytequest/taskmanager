@@ -42,12 +42,16 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
 builder.Services.AddScoped<ITodoTaskRepository, TodoTaskRepository>();
 builder.Services.AddScoped<IHistoryRepository, HistoryRepository>();
+builder.Services.AddScoped<IReportRepository, ReportRepository>();
+builder.Services.AddScoped<ICommentRepository, CommentRepository>();
 builder.Services.AddScoped<ISqlDataAccess, SqlDataAccess>();
 
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ITodoTaskService, TodoTaskService>();
 builder.Services.AddScoped<IHistoryService, HistoryService>();
 builder.Services.AddScoped<IProjectService, ProjectService>();
+builder.Services.AddScoped<IReportService, ReportService>();
+builder.Services.AddScoped<ICommentService, CommentService>();
 // Configuração do AutoMapper
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
@@ -67,12 +71,6 @@ if (app.Environment.IsDevelopment())
 
 // Middlewares personalizados
 app.UseMiddleware<ExceptionHandlingMiddleware>();
-
-// Aplicação condicional do RoleMiddleware somente para rotas específicas
-app.MapWhen(
-    context => context.Request.Path.StartsWithSegments("/api/reports"),
-    appBuilder => appBuilder.UseMiddleware<RoleMiddleware>("manager")
-);
 
 // Configuração de Swagger no ambiente de desenvolvimento
 if (app.Environment.IsDevelopment())

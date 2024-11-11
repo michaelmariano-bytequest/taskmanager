@@ -2,6 +2,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using TaskManagerAPI.Core.DTOs;
 using TaskManagerAPI.Infrastructure.Interfaces;
+using TaskManagerAPI.Services.Interfaces;
 
 namespace TaskManagerAPI.Controllers;
 
@@ -9,12 +10,12 @@ namespace TaskManagerAPI.Controllers;
 [Route("api/[controller]")]
 public class HistoryController : ControllerBase
 {
-    private readonly IHistoryRepository _historyRepository;
+    private readonly IHistoryService _historyService;
     private readonly IMapper _mapper;
 
-    public HistoryController(IHistoryRepository historyRepository, IMapper mapper)
+    public HistoryController(IHistoryService historyService, IMapper mapper)
     {
-        _historyRepository = historyRepository;
+        _historyService = historyService;
         _mapper = mapper;
     }
 
@@ -26,10 +27,13 @@ public class HistoryController : ControllerBase
     [HttpGet("task/{taskId}")]
     public async Task<ActionResult<IEnumerable<HistoryDTO>>> GetHistoryByTaskId(int taskId)
     {
-        var historyRecords = await _historyRepository.GetHistoryByTaskIdAsync(taskId);
+        var historyRecords = await _historyService.GetHistoryByTaskIdAsync(taskId);
+       
         if (!historyRecords.Any())
             return NotFound();
+       
         var historyDTOs = _mapper.Map<IEnumerable<HistoryDTO>>(historyRecords);
+        
         return Ok(historyDTOs);
     }
 }

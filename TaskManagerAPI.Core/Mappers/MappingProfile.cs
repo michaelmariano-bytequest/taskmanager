@@ -17,9 +17,12 @@ public class MappingProfile : Profile
         CreateMap<Project, ProjectDTO>();
 
         // Mapeamento para TodoTask e TaskDTO (supondo que exista um TaskDTO)
-        CreateMap<TodoTask, TodoTaskDTO>(); // Esse mapeamento assume que você criou um TaskDTO para o TodoTask
+        CreateMap<TodoTask, TodoTaskCreateDTO>(); // Esse mapeamento assume que você criou um TaskDTO para o TodoTask
 
         // Mapeamento para History, se necessário (exemplo)
         CreateMap<History, HistoryDTO>(); // Esse mapeamento também assume que existe um HistoryDTO
+        
+        CreateMap<TodoTaskUpdateDTO, TodoTask>()
+            .ForMember(dest => dest.Priority, opt => opt.Ignore()); // Ignora a prioridade no mapeamento
     }
 }

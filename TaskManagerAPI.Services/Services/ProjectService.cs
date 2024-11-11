@@ -1,6 +1,7 @@
 using TaskManagerAPI.Core.Common;
 using TaskManagerAPI.Core.DTOs;
 using TaskManagerAPI.Core.Entities;
+using TaskManagerAPI.Core.Enums;
 using TaskManagerAPI.Infrastructure.Interfaces;
 using TaskManagerAPI.Services.Interfaces;
 
@@ -69,13 +70,17 @@ public class ProjectService : IProjectService
             return Result.Failure("Project not found.");
         }
 
-        var tasks = await _todoTaskRepository.GetTasksByProjectIdAsync(id);
+        var tasks = await _todoTaskRepository.GetTasksByProjectIdAndStatusAsync(id, 
+            TodoTaskStatusEnum.Pending);
+       
         if (tasks.Any())
         {
-            return Result.Failure("Cannot delete project with associated tasks.");
+            return Result.Failure("Cannot delete the project because there are pending tasks. Please complete or " +
+                                  "remove all tasks associated with the project before attempting to delete it.");
         }
 
         await _projectRepository.DeleteProjectAsync(id);
+        
         return Result.Success();
     }
 }

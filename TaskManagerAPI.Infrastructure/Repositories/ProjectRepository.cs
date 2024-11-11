@@ -17,7 +17,7 @@ public class ProjectRepository : IProjectRepository
 
     public async Task<Project> GetProjectByIdAsync(int id)
     {
-        var sql = "SELECT * FROM task_manager.project WHERE id = @Id";
+        var sql = "SELECT * FROM task_manager.project WHERE id = @Id and status <> 'Deleted';";
 
         var parameters = new DynamicParameters();
         parameters.Add("Id", id, DbType.Int32);
@@ -27,7 +27,7 @@ public class ProjectRepository : IProjectRepository
 
     public async Task<IEnumerable<Project>> GetProjectsByUserIdAsync(int userId)
     {
-        var sql = "SELECT * FROM task_manager.project WHERE user_id = @UserId";
+        var sql = "SELECT * FROM task_manager.project WHERE userid = @UserId and status <> 'Deleted';";
 
         var parameters = new DynamicParameters();
         parameters.Add("UserId", userId, DbType.Int32);
@@ -37,7 +37,7 @@ public class ProjectRepository : IProjectRepository
 
     public async Task<int> CreateProjectAsync(Project project)
     {
-        var sql = "INSERT INTO task_manager.project (user_id, name, description, start_date, end_date, status) " +
+        var sql = "INSERT INTO task_manager.project (userid, name, description, start_date, end_date, status) " +
                   "VALUES (@UserId, @Name, @Description, @StartDate, @EndDate, @Status) RETURNING id;";
 
         var parameters = new DynamicParameters();
@@ -54,7 +54,7 @@ public class ProjectRepository : IProjectRepository
     public async Task UpdateProjectAsync(Project project)
     {
         var sql = "UPDATE task_manager.project SET name = @Name, description = @Description, " +
-                  "user_id = @UserId, start_date = @StartDate, end_date = @EndDate, status = @Status WHERE id = @Id";
+                  "userid = @UserId, start_date = @StartDate, end_date = @EndDate, status = @Status WHERE id = @Id";
 
         var parameters = new DynamicParameters();
         parameters.Add("Id", project.Id, DbType.Int32);
@@ -70,7 +70,7 @@ public class ProjectRepository : IProjectRepository
 
     public async Task DeleteProjectAsync(int id)
     {
-        var sql = "DELETE FROM task_manager.project WHERE id = @Id";
+        var sql = "UPDATE task_manager.project set status = 'Deleted' WHERE id = @Id;";
 
         var parameters = new DynamicParameters();
         parameters.Add("Id", id, DbType.Int32);

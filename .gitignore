@@ -1,6 +1,78 @@
-
+# Sistema
 .DS_Store
+
+# Diretórios de compilação
+bin/
+obj/
+out/
+
+# Configuração do Visual Studio
+.vscode/
+.vs/
+
+# Configuração do Rider e do IntelliJ IDEA
+.idea/
+.idea/.idea.TaskManagerAPI/
 .idea/.idea.TaskManagerAPI/.idea/.name
 .idea/.idea.TaskManagerAPI/.idea/encodings.xml
 .idea/.idea.TaskManagerAPI/.idea/indexLayout.xml
 .idea/.idea.TaskManagerAPI/.idea/vcs.xml
+
+# Configurações do Rider
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs e Relatórios de Depuração
+*.log
+*.stackdump
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.bak
+
+# Configurações locais e temporárias
+*.swp
+*.swo
+
+# Dependências e pacotes
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Configurações de usuário
+*.rsuser
+*.ruleset
+*.config
+
+# Configurações do sistema
+*.sln.ide
+
+# Banco de Dados SQLite local
+*.db
+*.sqlite
+
+# Diretório de publicação
+publish/
+
+# Certificados e chaves locais (se aplicável)
+*.pfx
+*.key
+
+# Diretorios para Testes e Configuração do Teste
+TestResults/
+*.coverage
+*.coveragexml
+*.log
+
+# Outros itens
+TaskManagerAPI.Core/bin
+TaskManagerAPI.Core/obj
+TaskManagerAPI.Infrastructure/bin
+TaskManagerAPI.Infrastructure/obj
+TaskManagerAPI.Tests/bin
+TaskManagerAPI.Tests/obj

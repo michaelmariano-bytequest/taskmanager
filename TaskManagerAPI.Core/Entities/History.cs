@@ -6,4 +6,5 @@ public class History
     public int TaskId { get; set; }
     public string Description { get; set; }
     public DateTime ModifiedAt { get; set; } = DateTime.UtcNow;
+    public int UserId { get; set; }
 }

@@ -36,7 +36,7 @@ public class TodoTaskService : ITodoTaskService
 
         int id = await _todoTaskRepository.CreateTodoTaskAsync(task);
         task.Id = id;
-        await _historyService.AddHistoryEntryAsync(task.Id, "Task created");
+        await _historyService.AddHistoryEntryAsync(task.Id, "Task created", task);
         
         return Result<TodoTask>.Success(task);
     }
@@ -44,7 +44,7 @@ public class TodoTaskService : ITodoTaskService
     public async Task UpdateTodoTaskAsync(TodoTask task)
     {
         await _todoTaskRepository.UpdateTodoTaskAsync(task);
-        await _historyService.AddHistoryEntryAsync(task.Id, "Task updated.");
+        await _historyService.AddHistoryEntryAsync(task.Id, "Task updated.", task);
     }
 
     public async Task<Result> SoftDeleteTodoTaskAsync(int taskId)
@@ -59,7 +59,7 @@ public class TodoTaskService : ITodoTaskService
         await _todoTaskRepository.UpdateTodoTaskAsync(task);
 
         // Adicionar uma entrada ao histórico informando a deleção
-        await _historyService.AddHistoryEntryAsync(task.Id, "Task marked as deleted");
+        await _historyService.AddHistoryEntryAsync(task.Id, "Task marked as deleted", task);
 
         return Result.Success();
     }

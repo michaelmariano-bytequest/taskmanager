@@ -27,13 +27,14 @@ public class HistoryRepository : IHistoryRepository
 
     public async Task AddHistoryAsync(History history)
     {
-        var sql = "INSERT INTO task_manager.history (task_id, description, modified_at) " +
-                  "VALUES (@TaskId, @Description, @ModifiedAt)";
+        var sql = "INSERT INTO task_manager.history (task_id, description, modified_at, userid) " +
+                  "VALUES (@TaskId, @Description, @ModifiedAt, @UserId)";
 
         var parameters = new DynamicParameters();
         parameters.Add("TaskId", history.TaskId, DbType.Int32);
         parameters.Add("Description", history.Description, DbType.String);
         parameters.Add("ModifiedAt", history.ModifiedAt, DbType.DateTime);
+        parameters.Add("UserId", history.UserId, DbType.Int32);
 
         await _dataAccess.ExecuteAsync(sql, parameters);
     }
