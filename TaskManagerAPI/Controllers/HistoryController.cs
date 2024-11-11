@@ -25,14 +25,14 @@ public class HistoryController : ControllerBase
     /// <param name="taskId">The ID of the task.</param>
     /// <returns>A list of history records for the specified task.</returns>
     [HttpGet("task/{taskId}")]
-    public async Task<ActionResult<IEnumerable<HistoryDTO>>> GetHistoryByTaskId(int taskId)
+    public async Task<ActionResult<List<HistoryDTO>>> GetHistoryByTaskId(int taskId)
     {
         var historyRecords = await _historyService.GetHistoryByTaskIdAsync(taskId);
        
         if (!historyRecords.Any())
             return NotFound();
        
-        var historyDTOs = _mapper.Map<IEnumerable<HistoryDTO>>(historyRecords);
+        var historyDTOs = _mapper.Map<List<HistoryDTO>>(historyRecords);
         
         return Ok(historyDTOs);
     }

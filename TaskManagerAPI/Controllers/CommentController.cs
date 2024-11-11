@@ -20,7 +20,7 @@ public class CommentController : ControllerBase
     /// </summary>
     /// <param name="commentDto">The comment details.</param>
     [HttpPost]
-    public async Task<IActionResult> AddComment([FromBody] AddCommentDTO commentDto)
+    public async Task<ActionResult> AddComment([FromBody] AddCommentDTO commentDto)
     {
         await _commentService.AddCommentAndLogHistoryAsync(commentDto);
         

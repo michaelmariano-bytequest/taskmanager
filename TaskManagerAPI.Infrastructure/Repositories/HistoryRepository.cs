@@ -15,7 +15,7 @@ public class HistoryRepository : IHistoryRepository
         _dataAccess = dataAccess;
     }
 
-    public async Task<IEnumerable<History>> GetHistoryByTaskIdAsync(int taskId)
+    public async Task<List<History>> GetHistoryByTaskIdAsync(int taskId)
     {
         var sql = "SELECT * FROM task_manager.history WHERE task_id = @TaskId ORDER BY modified_at DESC";
 

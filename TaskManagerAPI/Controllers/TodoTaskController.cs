@@ -1,5 +1,6 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using TaskManagerAPI.Core.Common;
 using TaskManagerAPI.Core.DTOs;
 using TaskManagerAPI.Core.Entities;
 using TaskManagerAPI.Services.Interfaces;
@@ -12,6 +13,7 @@ public class TodoTaskController : ControllerBase
 {
     private readonly ITodoTaskService _todoTaskService;
     private readonly IMapper _mapper;
+
     public TodoTaskController(ITodoTaskService todoTaskService, IMapper mapper)
     {
         _todoTaskService = todoTaskService;
@@ -24,16 +26,16 @@ public class TodoTaskController : ControllerBase
     /// <param name="projectId">The projectId of the related project.</param>
     /// <returns>The task details.</returns>
     [HttpGet("projects/{projectId}/tasks")]
-    public async Task<ActionResult<IEnumerable<TodoTaskCreateDTO>>> GetTasksByProjectId(int projectId)
+    public async Task<ActionResult<List<TodoTaskCreateDTO>>> GetTasksByProjectId(int projectId)
     {
         var tasks = await _todoTaskService.GetTasksByProjectIdAsync(projectId);
-        
+
         if (!tasks.Any())
             return NotFound();
 
         return Ok(tasks);
     }
-    
+
     /// <summary>
     ///     Retrieve a task by its unique ID.
     /// </summary>
@@ -43,8 +45,10 @@ public class TodoTaskController : ControllerBase
     public async Task<ActionResult<TodoTaskCreateDTO>> GetTodoTaskById(int id)
     {
         var task = await _todoTaskService.GetTodoTaskByIdAsync(id);
+        
         if (task == null)
             return NotFound();
+        
         return Ok(task);
     }
 
@@ -54,12 +58,18 @@ public class TodoTaskController : ControllerBase
     /// <param name="task">The details of the task to create.</param>
     /// <returns>The newly created task details.</returns>
     [HttpPost]
-    public async Task<IActionResult> CreateTodoTask(TodoTask task)
+    public async Task<ActionResult> CreateTodoTask(TodoTask task)
     {
         var result = await _todoTaskService.CreateTodoTaskAsync(task);
 
         if (!result.IsSuccess)
-            return BadRequest(new { ErrorCode = "TaskLimitExceeded", Message = result.ErrorMessage });
+        {
+            var errorResponse = new ErrorResponse
+            {
+                Message = result.ErrorMessage
+            };
+            return BadRequest(errorResponse);
+        }
 
         return CreatedAtAction(nameof(GetTodoTaskById), new { id = result.Value.Id }, result.Value);
     }
@@ -70,14 +80,14 @@ public class TodoTaskController : ControllerBase
     /// <param name="id">The ID of the task to update.</param>
     /// <param name="taskCreate">The updated task details.</param>
     [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateTodoTask(int id, TodoTaskUpdateDTO taskCreate)
+    public async Task<ActionResult> UpdateTodoTask(int id, TodoTaskUpdateDTO taskCreate)
     {
         if (id != taskCreate.Id)
             return BadRequest();
-        
+
         var todoTask = _mapper.Map<TodoTask>(taskCreate);
         await _todoTaskService.UpdateTodoTaskAsync(todoTask);
-        
+
         return NoContent();
     }
 
@@ -86,11 +96,12 @@ public class TodoTaskController : ControllerBase
     /// </summary>
     /// <param name="id">The ID of the task to delete.</param>
     [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteTodoTask(int id)
+    public async Task<ActionResult> DeleteTodoTask(int id)
     {
         var result = await _todoTaskService.SoftDeleteTodoTaskAsync(id);
 
-        if (!result.IsSuccess) return NotFound(new { Message = result.ErrorMessage });
+        if (!result.IsSuccess)
+            return NotFound(result.ErrorMessage);
 
         return NoContent();
     }

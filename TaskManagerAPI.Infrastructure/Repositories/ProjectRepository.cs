@@ -25,7 +25,7 @@ public class ProjectRepository : IProjectRepository
         return await _dataAccess.QuerySingleAsync<Project>(sql, parameters);
     }
 
-    public async Task<IEnumerable<Project>> GetProjectsByUserIdAsync(int userId)
+    public async Task<List<Project>> GetProjectsByUserIdAsync(int userId)
     {
         var sql = "SELECT * FROM task_manager.project WHERE userid = @UserId and status <> 'Deleted';";
 

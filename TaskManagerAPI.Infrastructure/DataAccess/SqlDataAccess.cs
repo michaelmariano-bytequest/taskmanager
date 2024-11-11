@@ -12,9 +12,9 @@ public class SqlDataAccess : ISqlDataAccess
         _dbConnection = dbConnection;
     }
 
-    public async Task<IEnumerable<T>> QueryAsync<T>(string sql, DynamicParameters parameters)
+    public async Task<List<T>> QueryAsync<T>(string sql, DynamicParameters parameters)
     {
-        return await _dbConnection.QueryAsync<T>(sql, parameters);
+        return (await _dbConnection.QueryAsync<T>(sql, parameters)).ToList();
     }
 
     public async Task<T> QuerySingleAsync<T>(string sql, DynamicParameters parameters)

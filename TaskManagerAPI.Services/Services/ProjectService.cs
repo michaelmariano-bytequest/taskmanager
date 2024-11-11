@@ -30,14 +30,14 @@ public class ProjectService : IProjectService
         return Result<Project>.Success(project);
     }
 
-    public async Task<Result<IEnumerable<Project>>> GetProjectsByUserIdAsync(int userId)
+    public async Task<Result<List<Project>>> GetProjectsByUserIdAsync(int userId)
     {
         var projects = await _projectRepository.GetProjectsByUserIdAsync(userId);
         
         if (!projects.Any())
-            return Result<IEnumerable<Project>>.Failure("Project not found by userId.");
+            return Result<List<Project>>.Failure("Project not found by userId.");
         else
-            return Result<IEnumerable<Project>>.Success(projects);
+            return Result<List<Project>>.Success(projects);
     }
 
     public async Task<Result> CreateProjectAsync(Project project)

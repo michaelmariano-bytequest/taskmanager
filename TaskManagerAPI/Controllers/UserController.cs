@@ -35,7 +35,7 @@ public class UserController : ControllerBase
     /// <param name="createUserDto">The user details to create.</param>
     /// <returns>The newly created user details.</returns>
     [HttpPost]
-    public async Task<IActionResult> CreateUser(CreateUserDTO createUserDto)
+    public async Task<ActionResult> CreateUser(CreateUserDTO createUserDto)
     {
         await _userService.CreateUserAsync(createUserDto);
         return CreatedAtAction(nameof(GetUserById), new { id = createUserDto.Email }, createUserDto);

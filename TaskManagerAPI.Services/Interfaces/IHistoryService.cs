@@ -7,5 +7,5 @@ namespace TaskManagerAPI.Services.Interfaces;
 public interface IHistoryService
 {
     Task<Result> AddHistoryEntryAsync(int taskId, string description, object obj);
-    Task<IEnumerable<History>> GetHistoryByTaskIdAsync(int taskId);
+    Task<List<History>> GetHistoryByTaskIdAsync(int taskId);
 }

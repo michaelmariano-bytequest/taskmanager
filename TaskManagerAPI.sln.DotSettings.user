@@ -3,5 +3,156 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AActionMethodExecutor_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FUsers_003Fmichaelmariano_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003Fdb7395f4add94e6d10e515b3e55373f2821f8323de7dc8e314d78feefacf5584_003FActionMethodExecutor_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AControllerBase_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F1b445ceb1c5ab1d07b7b55412b10a5e21169ec87228ca8ad8a18a6982f3278_003FControllerBase_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AControllerBase_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FUsers_003Fmichaelmariano_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F1b445ceb1c5ab1d07b7b55412b10a5e21169ec87228ca8ad8a18a6982f3278_003FControllerBase_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ACreatedAtActionResult_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FUsers_003Fmichaelmariano_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F14ccf04c437273fdf087675a2b27a6f6b47984899fdfc64b0b8879fe2b7b8d_003FCreatedAtActionResult_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AExceptionAggregator_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FUsers_003Fmichaelmariano_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003Fee54785cc7e75c1f43aa94bce8192ce441aead70a196ebd9aa287b48d25881e_003FExceptionAggregator_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AExecutionTimer_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FUsers_003Fmichaelmariano_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F3b92f859131bde25d0f7a63de08963e995d1e1426e584dfd4b8e833d2d3dba_003FExecutionTimer_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AFuture_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F13cbfe6856867dd1ed4e39575e46d816dae2a146a8ceec8f76b5897f5e0fe_003FFuture_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
-	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ASwaggerUIMiddleware_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FUsers_003Fmichaelmariano_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F781ebca67bd71532948352c2c24f8db410449e3c21f7191a17bf21348cd4fed4_003FSwaggerUIMiddleware_002Ecs/@EntryIndexedValue">ForceIncluded</s:String></wpf:ResourceDictionary>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AStatusCodeResult_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FUsers_003Fmichaelmariano_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F6a6c9ff1dbf4d353c8407fb271ee0ae394f2dc91819aa01481f414583fb8_003FStatusCodeResult_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ASwaggerUIMiddleware_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FUsers_003Fmichaelmariano_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F781ebca67bd71532948352c2c24f8db410449e3c21f7191a17bf21348cd4fed4_003FSwaggerUIMiddleware_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ATestInvoker_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FUsers_003Fmichaelmariano_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FSourcesCache_003F5e14a4e27990972fa4ae94975603bd298aaf328ee083c03b10569ee4724d57_003FTestInvoker_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=00cbdafd_002D86af_002D4b0f_002Da034_002Db0c06fc66c03/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DeleteProject_ShouldReturnOk_WhenProjectWasDeletedSuccess" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.DeleteProject_ShouldReturnOk_WhenProjectWasDeletedSuccess&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=01b49279_002Daaf6_002D4e80_002Da8b6_002De5286f5cac3d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DeleteProject_ShouldReturnOk_WhenProjectWasDeletedSuccess #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.DeleteProject_ShouldReturnOk_WhenProjectWasDeletedSuccess&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=04f6133f_002Dc362_002D4ec3_002D92bb_002D53f59fc1464c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UpdateProject_ShouldNotFound_WhenProjectWasNotFound #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.UpdateProject_ShouldNotFound_WhenProjectWasNotFound&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0eb5e62e_002Dbd72_002D405b_002D82ac_002D7ff24bacc7f0/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UpdateProject_ShouldNotFound_WhenProjectWasNotFound" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.UpdateProject_ShouldNotFound_WhenProjectWasNotFound&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=112c963e_002D2344_002D42f6_002D9cd6_002D8efc2bc66743/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Solution /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=12163396_002D6a84_002D4795_002Db4b5_002Df9eea0c028ad/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution #7" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Solution /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=178a04ad_002D294a_002D4270_002Dabc9_002De263b1e876a6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UpdateProject_ShouldReturnOk_WhenProjectWasUpdateSuccess" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.UpdateProject_ShouldReturnOk_WhenProjectWasUpdateSuccess&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=298aa209_002Dbc8b_002D4163_002D9887_002Dfeaaa57c827c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Solution /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=376aff9b_002D9810_002D4e80_002Dbe8c_002D5e223ec53cdd/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UpdateProject_ShouldReturnOk_WhenProjectWasUpdateSuccess #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.UpdateProject_ShouldReturnOk_WhenProjectWasUpdateSuccess&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3fd8c1b3_002D32b9_002D4497_002D98eb_002D39ebf0236f07/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UpdateProject_ShouldNotFound_WhenProjectWasNotFound #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.UpdateProject_ShouldNotFound_WhenProjectWasNotFound&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=54cce21a_002D1f01_002D46d1_002Da5b0_002D8d68c1e71721/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DeleteProject_ShouldReturnOk_WhenProjectWasDeletedSuccess #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.DeleteProject_ShouldReturnOk_WhenProjectWasDeletedSuccess&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=569ee6ed_002D7862_002D4f77_002Dbdfb_002D2c9232523963/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DeleteProject_ShouldReturnOk_WhenProjectWasDeletedSuccess #6" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.DeleteProject_ShouldReturnOk_WhenProjectWasDeletedSuccess&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5dcbd33c_002D96da_002D4807_002Da720_002D2a511f3a49be/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UpdateProject_ShouldNotFound_WhenProjectWasNotFound #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.UpdateProject_ShouldNotFound_WhenProjectWasNotFound&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=606caaf9_002D1929_002D4c27_002Da8f2_002D3bbce34b458d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DeleteProject_ShouldReturnBadRequest_WhenProjectHaveTasksPending #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.DeleteProject_ShouldReturnBadRequest_WhenProjectHaveTasksPending&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6398a0de_002D54c6_002D4613_002Dbdb1_002Dafe359e067d5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DeleteProject_ShouldReturnBadRequest_WhenProjectHaveTasksPending #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.DeleteProject_ShouldReturnBadRequest_WhenProjectHaveTasksPending&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=66022947_002D74ba_002D449c_002D9d73_002D811987cccc63/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Solution /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7f242b17_002Dce3c_002D4467_002Dbf32_002De0db30f8473a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DeleteProject_ShouldReturnBadRequest_WhenProjectHaveTasksPending" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.DeleteProject_ShouldReturnBadRequest_WhenProjectHaveTasksPending&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=81400e45_002D67e2_002D42f7_002D891a_002D218cd939a9b3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UpdateProject_ShouldReturnOk_WhenProjectWasUpdateSuccess #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.UpdateProject_ShouldReturnOk_WhenProjectWasUpdateSuccess&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8852a83a_002D6195_002D464c_002D88b0_002D3327eb3f53ad/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DeleteProject_ShouldReturnBadRequest_WhenProjectNotFound" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.DeleteProject_ShouldReturnBadRequest_WhenProjectNotFound&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8ae21173_002D3893_002D4da0_002D97e7_002D46d1cab281d5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DeleteProject_ShouldReturnBadRequest_WhenProjectHaveTasksPending #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.DeleteProject_ShouldReturnBadRequest_WhenProjectHaveTasksPending&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8d0a2bc0_002D68da_002D4021_002D9899_002Df00fec7635e4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UpdateProject_ShouldReturnOk_WhenProjectWasUpdateSuccess #7" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.UpdateProject_ShouldReturnOk_WhenProjectWasUpdateSuccess&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=94245e59_002D9c35_002D4e72_002D846f_002D8af3076170bf/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UpdateProject_ShouldReturnOk_WhenProjectWasUpdateSuccess #6" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.UpdateProject_ShouldReturnOk_WhenProjectWasUpdateSuccess&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9d7230e2_002Da559_002D483b_002D9f72_002Dec25fd6c4aca/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DeleteProject_ShouldReturnOk_WhenProjectWasDeletedSuccess #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.DeleteProject_ShouldReturnOk_WhenProjectWasDeletedSuccess&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a2654473_002D4008_002D454d_002Da3b9_002D97a735bc03cf/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Solution /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ab596b88_002D1f8b_002D4f00_002Da706_002D823b0b77c8b5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UpdateProject_ShouldReturnOk_WhenProjectWasUpdateSuccess #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.UpdateProject_ShouldReturnOk_WhenProjectWasUpdateSuccess&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c1ac45a7_002D8df7_002D40b6_002D8958_002D7ae3df411c64/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DeleteProject_ShouldReturnOk_WhenProjectWasDeletedSuccess #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.DeleteProject_ShouldReturnOk_WhenProjectWasDeletedSuccess&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c90fd05c_002D4dee_002D4908_002Dabdb_002Df7c10798c29f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Solution /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=cc8af238_002D7bd1_002D4b73_002D8470_002D8f10591e6510/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DeleteProject_ShouldReturnBadRequest_WhenProjectHaveTasksPending #6" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.DeleteProject_ShouldReturnBadRequest_WhenProjectHaveTasksPending&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=cfba5406_002D750f_002D487b_002Dbb07_002D1c0e3be8bfb8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution #6" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Solution /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d3322dd0_002D4a45_002D438a_002Da012_002Dcb6cc87d2f79/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UpdateProject_ShouldNotFound_WhenProjectWasNotFound #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.UpdateProject_ShouldNotFound_WhenProjectWasNotFound&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e486c92f_002D6e82_002D4ce2_002Dab20_002D527cf8f7ad4c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DeleteProject_ShouldReturnBadRequest_WhenProjectHaveTasksPending #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.DeleteProject_ShouldReturnBadRequest_WhenProjectHaveTasksPending&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fe1b780c_002Dd73f_002D48d6_002D8507_002De68c99ccfc81/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UpdateProject_ShouldReturnOk_WhenProjectWasUpdateSuccess #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.UpdateProject_ShouldReturnOk_WhenProjectWasUpdateSuccess&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

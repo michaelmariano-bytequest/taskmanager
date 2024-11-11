@@ -2,7 +2,7 @@ namespace TaskManagerAPI.Core.DTOs
 {
     public class PerformanceReportDTO
     {
-        public IEnumerable<UserPerformanceDTO> Data { get; set; }
+        public List<UserPerformanceDTO> Data { get; set; }
     }
 
     public class UserPerformanceDTO

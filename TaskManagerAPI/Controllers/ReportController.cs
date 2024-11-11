@@ -20,7 +20,7 @@ public class ReportController : ControllerBase
     /// <param name="role">The role of the user requesting the report.</param>
     /// <returns>The performance report data.</returns>
     [HttpGet("performance")]
-    public async Task<IActionResult> GetPerformanceReport([FromQuery] string role)
+    public async Task<ActionResult> GetPerformanceReport([FromQuery] string role)
     {
         if (role?.ToLower() != "manager")
         {

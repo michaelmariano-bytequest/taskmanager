@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using TaskManagerAPI.Core.Common;
 using TaskManagerAPI.Core.DTOs;
 using TaskManagerAPI.Core.Entities;
 using TaskManagerAPI.Services.Interfaces;
@@ -17,20 +18,20 @@ namespace TaskManagerAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetProjectById(int id)
+        public async Task<ActionResult<Project>> GetProjectById(int id)
         {
             var result = await _projectService.GetProjectByIdAsync(id);
 
             if (!result.IsSuccess)
             {
-                return NotFound(new { Message = result.ErrorMessage });
+                return NotFound(result.ErrorMessage);
             }
 
             return Ok(result.Value);
         }
 
         [HttpGet("user/{userId}")]
-        public async Task<IActionResult> GetProjectsByUserId(int userId)
+        public async Task<ActionResult<List<Project>>> GetProjectsByUserId(int userId)
         {
             var result = await _projectService.GetProjectsByUserIdAsync(userId);
             
@@ -41,40 +42,44 @@ namespace TaskManagerAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateProject([FromBody] Project project)
+        public async Task<ActionResult> CreateProject([FromBody] Project project)
         {
             var result = await _projectService.CreateProjectAsync(project);
 
             if (!result.IsSuccess)
             {
-                return BadRequest(new { Message = result.ErrorMessage });
+                return BadRequest(result.ErrorMessage);
             }
 
             return CreatedAtAction(nameof(GetProjectById), new { id = project.Id }, project);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateProject(int id, [FromBody] Project project)
+        public async Task<ActionResult> UpdateProject(int id, [FromBody] Project project)
         {
-            project.Id = id; // Ensures the ID in the route is used
+            project.Id = id; 
             var result = await _projectService.UpdateProjectAsync(project);
 
             if (!result.IsSuccess)
             {
-                return NotFound(new { Message = result.ErrorMessage });
+                return NotFound(result.ErrorMessage);
             }
 
             return NoContent();
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteProject(int id)
+        public async Task<ActionResult> DeleteProject(int id)
         {
             var result = await _projectService.DeleteProjectAsync(id);
 
             if (!result.IsSuccess)
             {
-                return BadRequest(new { Message = result.ErrorMessage });
+                var errorResponse = new ErrorResponse
+                {
+                    Message = result.ErrorMessage
+                };
+                return BadRequest(errorResponse);
             }
 
             return NoContent();

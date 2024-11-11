@@ -26,7 +26,7 @@ public class TodoTaskRepository : ITodoTaskRepository
         return await _dataAccess.QuerySingleAsync<TodoTask>(sql, parameters);
     }
 
-    public async Task<IEnumerable<TodoTask>> GetTasksByProjectIdAsync(int projectId)
+    public async Task<List<TodoTask>> GetTasksByProjectIdAsync(int projectId)
     {
         var sql = "SELECT * FROM task_manager.todo_task WHERE project_id = @ProjectId and status <> 'Deleted';";
 
@@ -36,7 +36,7 @@ public class TodoTaskRepository : ITodoTaskRepository
         return await _dataAccess.QueryAsync<TodoTask>(sql, parameters);
     }
     
-    public async Task<IEnumerable<TodoTask>> GetTasksByProjectIdAndStatusAsync(int projectId, TodoTaskStatusEnum todoTaskStatus)
+    public async Task<List<TodoTask>> GetTasksByProjectIdAndStatusAsync(int projectId, TodoTaskStatusEnum todoTaskStatus)
     {
         var sql = "SELECT * FROM task_manager.todo_task WHERE project_id = @ProjectId AND status = @TodoTaskStatus;";
 

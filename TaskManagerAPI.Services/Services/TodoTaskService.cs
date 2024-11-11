@@ -22,7 +22,7 @@ public class TodoTaskService : ITodoTaskService
         return await _todoTaskRepository.GetTodoTaskByIdAsync(id);
     }
 
-    public async Task<IEnumerable<TodoTask>> GetTasksByProjectIdAsync(int projectId)
+    public async Task<List<TodoTask>> GetTasksByProjectIdAsync(int projectId)
     {
         return await _todoTaskRepository.GetTasksByProjectIdAsync(projectId);
     }

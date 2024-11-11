@@ -63,7 +63,7 @@ public class HistoryService : IHistoryService
         }
     }
 
-    public async Task<IEnumerable<History>> GetHistoryByTaskIdAsync(int taskId)
+    public async Task<List<History>> GetHistoryByTaskIdAsync(int taskId)
     {
         return await _historyRepository.GetHistoryByTaskIdAsync(taskId);
     }
