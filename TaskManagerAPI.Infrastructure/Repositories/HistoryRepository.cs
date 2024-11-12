@@ -17,7 +17,7 @@ public class HistoryRepository : IHistoryRepository
 
     public async Task<List<History>> GetHistoryByTaskIdAsync(int taskId)
     {
-        var sql = "SELECT * FROM task_manager.history WHERE task_id = @TaskId ORDER BY modified_at DESC";
+        var sql = "SELECT * FROM task_manager.history WHERE taskid = @TaskId ORDER BY modifiedat DESC";
 
         var parameters = new DynamicParameters();
         parameters.Add("TaskId", taskId, DbType.Int32);
@@ -27,7 +27,7 @@ public class HistoryRepository : IHistoryRepository
 
     public async Task AddHistoryAsync(History history)
     {
-        var sql = "INSERT INTO task_manager.history (task_id, description, modified_at, userid) " +
+        var sql = "INSERT INTO task_manager.history (taskid, description, modifiedat, userid) " +
                   "VALUES (@TaskId, @Description, @ModifiedAt, @UserId)";
 
         var parameters = new DynamicParameters();

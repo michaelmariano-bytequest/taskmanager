@@ -37,7 +37,7 @@ public class ProjectRepository : IProjectRepository
 
     public async Task<int> CreateProjectAsync(Project project)
     {
-        var sql = "INSERT INTO task_manager.project (userid, name, description, start_date, end_date, status) " +
+        var sql = "INSERT INTO task_manager.project (userid, name, description, startdate, enddate, status) " +
                   "VALUES (@UserId, @Name, @Description, @StartDate, @EndDate, @Status) RETURNING id;";
 
         var parameters = new DynamicParameters();
@@ -54,7 +54,7 @@ public class ProjectRepository : IProjectRepository
     public async Task UpdateProjectAsync(Project project)
     {
         var sql = "UPDATE task_manager.project SET name = @Name, description = @Description, " +
-                  "userid = @UserId, start_date = @StartDate, end_date = @EndDate, status = @Status WHERE id = @Id";
+                  "userid = @UserId, startdate = @StartDate, enddate = @EndDate, status = @Status WHERE id = @Id";
 
         var parameters = new DynamicParameters();
         parameters.Add("Id", project.Id, DbType.Int32);

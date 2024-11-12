@@ -4,5 +4,5 @@ namespace TaskManagerAPI.Services.Interfaces;
 
 public interface IReportService
 {
-    Task<PerformanceReportDTO> GeneratePerformanceReportAsync();
+    Task<PerformanceReportDTO> GeneratePerformanceReportAsync(int? userId, DateTime? startDate, DateTime? endDate);
 }

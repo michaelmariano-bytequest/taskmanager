@@ -13,9 +13,9 @@ namespace TaskManagerAPI.Services.Services
             _reportRepository = reportRepository;
         }
 
-        public async Task<PerformanceReportDTO> GeneratePerformanceReportAsync()
+        public async Task<PerformanceReportDTO> GeneratePerformanceReportAsync(int? userId, DateTime? startDate, DateTime? endDate)
         {
-            var reportData = await _reportRepository.GetCompletedTasksReportAsync();
+            var reportData = await _reportRepository.GetCompletedTasksReportAsync(userId, startDate, endDate);
             return new PerformanceReportDTO { Data = reportData };
         }
     }

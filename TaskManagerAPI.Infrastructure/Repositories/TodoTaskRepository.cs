@@ -28,7 +28,7 @@ public class TodoTaskRepository : ITodoTaskRepository
 
     public async Task<List<TodoTask>> GetTasksByProjectIdAsync(int projectId)
     {
-        var sql = "SELECT * FROM task_manager.todo_task WHERE project_id = @ProjectId and status <> 'Deleted';";
+        var sql = "SELECT * FROM task_manager.todo_task WHERE projectid = @ProjectId and status <> 'Deleted';";
 
         var parameters = new DynamicParameters();
         parameters.Add("ProjectId", projectId, DbType.Int32);
@@ -38,7 +38,7 @@ public class TodoTaskRepository : ITodoTaskRepository
     
     public async Task<List<TodoTask>> GetTasksByProjectIdAndStatusAsync(int projectId, TodoTaskStatusEnum todoTaskStatus)
     {
-        var sql = "SELECT * FROM task_manager.todo_task WHERE project_id = @ProjectId AND status = @TodoTaskStatus;";
+        var sql = "SELECT * FROM task_manager.todo_task WHERE projectid = @ProjectId AND status = @TodoTaskStatus;";
 
         var parameters = new DynamicParameters();
         parameters.Add("ProjectId", projectId, DbType.Int32);
@@ -49,7 +49,7 @@ public class TodoTaskRepository : ITodoTaskRepository
     
     public async Task<int> CreateTodoTaskAsync(TodoTask task)
     {
-        var sql = "INSERT INTO task_manager.todo_task (project_id, title, description, created_at, due_date, priority, status) " +
+        var sql = "INSERT INTO task_manager.todo_task (projectid, title, description, createdat, duedate, priority, status) " +
                   "VALUES (@ProjectId, @Title, @Description, @CreatedAt, @DueDate, @Priority, @Status) RETURNING id;";
 
         var parameters = new DynamicParameters();
@@ -67,13 +67,13 @@ public class TodoTaskRepository : ITodoTaskRepository
     public async Task UpdateTodoTaskAsync(TodoTask task)
     {
         var sql = "UPDATE task_manager.todo_task SET title = @Title, description = @Description, " +
-                  "due_date = @DueDate, status = @Status WHERE id = @Id;";
+                  "duedate = @DueDate, status = @Status WHERE id = @Id;";
 
         var parameters = new DynamicParameters();
         parameters.Add("Id", task.Id, DbType.Int32);
         parameters.Add("Title", task.Title, DbType.String);
         parameters.Add("Description", task.Description, DbType.String);
-        parameters.Add("DueDate", task.DueDate, DbType.DateTime);
+        parameters.Add("DueDate", task.DueDate, DbType.DateTime2);
         parameters.Add("Status", task.Status.ToString(), DbType.String);
 
         await _dataAccess.ExecuteAsync(sql, parameters);

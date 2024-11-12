@@ -10,9 +10,9 @@ namespace TaskManagerAPI.Infrastructure.Repositories
     {
         private readonly ISqlDataAccess _sqlDataAccess;
 
-        public ReportRepository(ISqlDataAccess _sqlDataAccess)
+        public ReportRepository(ISqlDataAccess sqlDataAccess)
         {
-            _sqlDataAccess = _sqlDataAccess;
+            _sqlDataAccess = sqlDataAccess;
         }
 
         public async Task<List<UserPerformanceDTO>> GetCompletedTasksReportAsync(
@@ -23,7 +23,7 @@ namespace TaskManagerAPI.Infrastructure.Repositories
             var sql = @"
                 SELECT p.userid AS UserId, COUNT(*) / 30.0 AS AvgCompletedTasksPerDay
                 FROM task_manager.todo_task tt 
-                JOIN task_manager.project p ON tt.project_id = p.id
+                JOIN task_manager.project p ON tt.projectid = p.id
                 WHERE tt.status = 'Completed' 
                 ";
 
@@ -39,18 +39,18 @@ namespace TaskManagerAPI.Infrastructure.Repositories
             // Filtro de data inicial
             if (startDate.HasValue)
             {
-                sql += " AND tt.due_date >= @StartDate";
+                sql += " AND tt.duedate >= @StartDate";
                 parameters.Add("StartDate", startDate.Value);
             }
             else
             {
-                sql += " AND tt.due_date >= NOW() - INTERVAL '30 days'";
+                sql += " AND tt.duedate >= NOW() - INTERVAL '30 days'";
             }
 
             // Filtro de data final
             if (endDate.HasValue)
             {
-                sql += " AND tt.due_date <= @EndDate";
+                sql += " AND tt.duedate <= @EndDate";
                 parameters.Add("EndDate", endDate.Value);
             }
 
