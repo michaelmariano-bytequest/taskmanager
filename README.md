@@ -29,6 +29,8 @@ Requisitos
 
 	http://localhost:5224/swagger/index.html
 
+ 	4. O script para criação do banco de dados Postgres está na pasta DataBase no arquivo database.sql
+
 
 
 Variáveis de Ambiente
