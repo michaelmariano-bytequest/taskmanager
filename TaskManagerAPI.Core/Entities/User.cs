@@ -1,5 +1,8 @@
 namespace TaskManagerAPI.Core.Entities;
 
+/// <summary>
+/// Represents a user in the Task Manager application.
+/// </summary>
 public class User
 {
     public int Id { get; set; }

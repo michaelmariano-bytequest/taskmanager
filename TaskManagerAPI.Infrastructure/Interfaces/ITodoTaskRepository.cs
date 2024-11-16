@@ -3,6 +3,9 @@ using TaskManagerAPI.Core.Enums;
 
 namespace TaskManagerAPI.Infrastructure.Interfaces;
 
+/// <summary>
+/// Provides an interface for CRUD operations on TodoTask entities.
+/// </summary>
 public interface ITodoTaskRepository
 {
     Task<TodoTask> GetTodoTaskByIdAsync(int id);

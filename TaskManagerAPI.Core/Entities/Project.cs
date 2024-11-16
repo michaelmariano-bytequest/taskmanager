@@ -2,6 +2,9 @@ using TaskManagerAPI.Core.Enums;
 
 namespace TaskManagerAPI.Core.Entities;
 
+/// <summary>
+/// Represents a project within the task manager system.
+/// </summary>
 public class Project
 {
     public int Id { get; set; }

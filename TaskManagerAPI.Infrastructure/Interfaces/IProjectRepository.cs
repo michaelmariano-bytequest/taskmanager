@@ -2,6 +2,9 @@ using TaskManagerAPI.Core.Entities;
 
 namespace TaskManagerAPI.Infrastructure.Interfaces;
 
+/// <summary>
+/// Represents a repository interface for accessing project data.
+/// </summary>
 public interface IProjectRepository
 {
     Task<Project> GetProjectByIdAsync(int id);

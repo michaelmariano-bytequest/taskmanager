@@ -2,6 +2,9 @@ using TaskManagerAPI.Core.Enums;
 
 namespace TaskManagerAPI.Core.Entities;
 
+/// <summary>
+/// Represents a task in the to-do list.
+/// </summary>
 public class TodoTask
 {
     public int Id { get; set; }

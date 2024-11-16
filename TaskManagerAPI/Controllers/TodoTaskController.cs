@@ -7,13 +7,26 @@ using TaskManagerAPI.Services.Interfaces;
 
 namespace TaskManagerAPI.Controllers;
 
+/// <summary>
+/// Controller for managing todo tasks.
+/// </summary>
 [ApiController]
 [Route("api/[controller]")]
 public class TodoTaskController : ControllerBase
 {
+    /// <summary>
+    /// Service interface for handling ToDo task related operations.
+    /// </summary>
     private readonly ITodoTaskService _todoTaskService;
+
+    /// <summary>
+    /// Handles object mapping between different layers and representations within the application.
+    /// </summary>
     private readonly IMapper _mapper;
 
+    /// <summary>
+    /// Controller for handling ToDo task-related operations.
+    /// </summary>
     public TodoTaskController(ITodoTaskService todoTaskService, IMapper mapper)
     {
         _todoTaskService = todoTaskService;
@@ -37,7 +50,7 @@ public class TodoTaskController : ControllerBase
     }
 
     /// <summary>
-    ///     Retrieve a task by its unique ID.
+    /// Retrieve a task by its unique ID.
     /// </summary>
     /// <param name="id">The ID of the task.</param>
     /// <returns>The task details.</returns>
@@ -53,7 +66,7 @@ public class TodoTaskController : ControllerBase
     }
 
     /// <summary>
-    ///     Create a new task.
+    /// Create a new task.
     /// </summary>
     /// <param name="task">The details of the task to create.</param>
     /// <returns>The newly created task details.</returns>
@@ -75,10 +88,11 @@ public class TodoTaskController : ControllerBase
     }
 
     /// <summary>
-    ///     Update an existing task. The task priority parameter can't be updated. 
+    /// Update an existing task. The task priority parameter can't be updated.
     /// </summary>
     /// <param name="id">The ID of the task to update.</param>
     /// <param name="taskCreate">The updated task details.</param>
+    /// <returns>A no content response indicating the task was updated or a bad request if the IDs do not match.</returns>
     [HttpPut("{id}")]
     public async Task<ActionResult> UpdateTodoTask(int id, TodoTaskUpdateDTO taskCreate)
     {
@@ -92,9 +106,10 @@ public class TodoTaskController : ControllerBase
     }
 
     /// <summary>
-    ///     Delete a task by ID.
+    /// Delete a task by ID.
     /// </summary>
     /// <param name="id">The ID of the task to delete.</param>
+    /// <returns>A status indicating the result of the delete operation.</returns>
     [HttpDelete("{id}")]
     public async Task<ActionResult> DeleteTodoTask(int id)
     {

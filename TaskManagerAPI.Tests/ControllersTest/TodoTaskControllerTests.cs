@@ -13,13 +13,36 @@ using Xunit;
 
 namespace TaskManagerAPI.Tests.ControllersTest
 {
+    /// <summary>
+    /// Contains unit tests for the TodoTaskController class.
+    /// </summary>
     public class TodoTaskControllerTests
     {
+        /// <summary>
+        /// A mock implementation of the ITodoTaskRepository interface used for testing purposes.
+        /// </summary>
         private readonly Mock<ITodoTaskRepository> _mockTodoTaskRepository;
+
+        /// <summary>
+        /// Mock implementation of the <see cref="IHistoryService"/> used for unit testing purposes.
+        /// </summary>
         private readonly Mock<IHistoryService> _mockHistoryService;
+
+        /// <summary>
+        /// A mock instance of the <see cref="IMapper"/> interface used for testing purposes in the
+        /// <c>TodoTaskControllerTests</c> class. This mock is configured to simulate the behavior of
+        /// AutoMapper mappings for unit tests.
+        /// </summary>
         private readonly Mock<IMapper> _mockMapper;
+
+        /// <summary>
+        /// An instance of the <see cref="TodoTaskController"/> used to manage and test the various functionalities of the TodoTask endpoints.
+        /// </summary>
         private readonly TodoTaskController _controller;
 
+        /// <summary>
+        /// Unit test class for TodoTaskController, containing methods to test various API endpoints and their expected behaviors.
+        /// </summary>
         public TodoTaskControllerTests()
         {
             _mockTodoTaskRepository = new Mock<ITodoTaskRepository>();
@@ -29,7 +52,14 @@ namespace TaskManagerAPI.Tests.ControllersTest
             var service = new TodoTaskService(_mockTodoTaskRepository.Object, _mockHistoryService.Object);
             _controller = new TodoTaskController(service, _mockMapper.Object);
         }
-        
+
+        /// <summary>
+        /// Mocks a Todo task with predefined properties and sets up the task creation
+        /// in the mock repository.
+        /// </summary>
+        /// <returns>
+        /// A mocked <see cref="TodoTask"/> with predefined properties.
+        /// </returns>
         private TodoTask MockOneTask()
         {
             var newTask = new TodoTask
@@ -45,7 +75,13 @@ namespace TaskManagerAPI.Tests.ControllersTest
             
             return newTask;
         }
-        
+
+        /// <summary>
+        /// Mocks a TodoTaskUpdateDTO object with predefined values.
+        /// </summary>
+        /// <returns>
+        /// A TodoTaskUpdateDTO instance with assigned test values.
+        /// </returns>
         private TodoTaskUpdateDTO MockOneTaskUpdateDto()
         {
             var newTask = new TodoTaskUpdateDTO
@@ -83,7 +119,12 @@ namespace TaskManagerAPI.Tests.ControllersTest
 
             return newTask;
         }
-        
+
+        /// <summary>
+        /// Creates a list of mocked TodoTask instances.
+        /// </summary>
+        /// <param name="qtd">The quantity of TodoTask instances to create.</param>
+        /// <returns>A list of mocked TodoTask instances.</returns>
         private List<TodoTask> MockListTasks(int qtd)
         {
             var lstTasks = new List<TodoTask>();
@@ -107,6 +148,14 @@ namespace TaskManagerAPI.Tests.ControllersTest
             return lstTasks;
         }
 
+        /// <summary>
+        /// Tests that GetTasksByProjectId in TodoTaskController returns an OkObjectResult
+        /// with a list of TodoTask objects when tasks exist for a given projectId.
+        /// </summary>
+        /// <returns>
+        /// A task that represents the asynchronous operation. The task result contains
+        /// an OkObjectResult with a list of TodoTask objects if tasks exist, otherwise a NotFound result.
+        /// </returns>
         [Fact]
         public async Task GetTasksByProjectId_ReturnsOkResult_WithListOfTasks()
         {
@@ -129,6 +178,10 @@ namespace TaskManagerAPI.Tests.ControllersTest
             Assert.Equal(2, returnTasks.Count);
         }
 
+        /// <summary>
+        /// Ensures the GetTasksByProjectId method returns a NotFound result when no tasks exist for a given project ID.
+        /// </summary>
+        /// <returns>A task that represents the asynchronous operation. The task result contains the action result.</returns>
         [Fact]
         public async Task GetTasksByProjectId_ReturnsNotFound_WhenNoTasksExist()
         {
@@ -145,6 +198,11 @@ namespace TaskManagerAPI.Tests.ControllersTest
             Assert.IsType<NotFoundResult>(result.Result);
         }
 
+        /// <summary>
+        /// Verifies that the GetTodoTaskById method returns a NotFound result
+        /// when the specified task does not exist in the repository.
+        /// </summary>
+        /// <returns>A task representing the asynchronous operation.</returns>
         [Fact]
         public async Task GetTodoTaskById_ReturnsNotFound_WhenTaskDoesNotExist()
         {
@@ -160,6 +218,13 @@ namespace TaskManagerAPI.Tests.ControllersTest
             Assert.IsType<NotFoundResult>(result.Result);
         }
 
+        /// <summary>
+        /// Test to verify that the GetTodoTaskById method returns an Ok result with the specified task.
+        /// </summary>
+        /// <returns>
+        /// A task that represents the asynchronous test operation. The task result contains an OkObjectResult
+        /// with the expected TodoTask if the task exists.
+        /// </returns>
         [Fact]
         public async Task GetTodoTaskById_ReturnsOkResult_WithTask()
         {
@@ -185,7 +250,13 @@ namespace TaskManagerAPI.Tests.ControllersTest
             Assert.Equal(expectedTaskDto.Id, returnTask.Id);
             Assert.Equal(expectedTaskDto.Description, returnTask.Description);
         }
-        
+
+        /// <summary>
+        /// Verifies that the CreateTodoTask method returns a CreatedAtActionResult when a task is created successfully.
+        /// </summary>
+        /// <returns>
+        /// A Task representing the asynchronous operation.
+        /// </returns>
         [Fact]
         public async Task CreateTodoTask_ShouldReturnCreatedResponse_WhenTaskIsCreatedSuccessfully()
         {
@@ -202,6 +273,11 @@ namespace TaskManagerAPI.Tests.ControllersTest
             Assert.Equal(newTask, result.Value);
         }
 
+        /// <summary>
+        /// Tests that the CreateTodoTask method of the TodoTaskController should return a BadRequest response
+        /// when the task creation fails due to reaching maximum task limit.
+        /// </summary>
+        /// <returns>Task representing the asynchronous operation of the test.</returns>
         [Fact]
         public async Task CreateTodoTask_ShouldReturnBadRequest_WhenTaskCreationFails()
         {
@@ -217,7 +293,13 @@ namespace TaskManagerAPI.Tests.ControllersTest
             Assert.Equal(400, result.StatusCode);
             Assert.Equal("The project has reached the maximum limit of 20 tasks.", (result.Value as dynamic).Message);
         }
-        
+
+        /// <summary>
+        /// Validates that when a Todo task is updated successfully, the API returns a response indicating the task was created.
+        /// </summary>
+        /// <returns>
+        /// A task that represents the asynchronous operation. The task result contains an assertion that checks if the HTTP status code is 204 (No Content).
+        /// </returns>
         [Fact]
         public async Task UpdateTodoTask_ShouldReturnCreatedResponse_WhenTaskIsUpdatedSuccessfully()
         {
@@ -231,7 +313,11 @@ namespace TaskManagerAPI.Tests.ControllersTest
             // Assert
             Assert.Equal(204, result.StatusCode);
         }
-        
+
+        /// <summary>
+        /// Ensures that deleting a TodoTask returns a NoContent result if the deletion is successful.
+        /// </summary>
+        /// <returns>NoContentResult if deletion is successful.</returns>
         [Fact]
         public async Task DeleteTodoTask_ShouldReturnNoContent_WhenDeletionIsSuccessful()
         {
@@ -258,6 +344,10 @@ namespace TaskManagerAPI.Tests.ControllersTest
             Assert.IsType<NoContentResult>(result);
         }
 
+        /// <summary>
+        /// Ensures that the Delete operation returns a NotFound result when the task to be deleted does not exist in the repository.
+        /// </summary>
+        /// <returns>A NotFoundObjectResult indicating that the task was not found.</returns>
         [Fact]
         public async Task DeleteTodoTask_ShouldReturnNotFound_WhenTaskDoesNotExist()
         {

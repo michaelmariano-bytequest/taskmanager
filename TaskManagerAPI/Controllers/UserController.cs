@@ -4,19 +4,28 @@ using TaskManagerAPI.Services.Interfaces;
 
 namespace TaskManagerAPI.Controllers;
 
+/// <summary>
+/// Controller responsible for handling user-related requests.
+/// </summary>
 [ApiController]
 [Route("api/[controller]")]
 public class UserController : ControllerBase
 {
+    /// <summary>
+    /// Service to manage user-related operations.
+    /// </summary>
     private readonly IUserService _userService;
 
+    /// <summary>
+    /// Controller to handle user-related endpoints.
+    /// </summary>
     public UserController(IUserService userService)
     {
         _userService = userService;
     }
 
     /// <summary>
-    ///     Retrieve a user by their unique ID.
+    /// Retrieve a user by their unique ID.
     /// </summary>
     /// <param name="id">The ID of the user.</param>
     /// <returns>The user details.</returns>
@@ -30,7 +39,7 @@ public class UserController : ControllerBase
     }
 
     /// <summary>
-    ///     Create a new user.
+    /// Create a new user.
     /// </summary>
     /// <param name="createUserDto">The user details to create.</param>
     /// <returns>The newly created user details.</returns>

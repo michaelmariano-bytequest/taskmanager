@@ -7,15 +7,31 @@ using TaskManagerAPI.Services.Interfaces;
 
 namespace TaskManagerAPI.Services.Services;
 
+/// <summary>
+/// Service responsible for managing history entries related to tasks.
+/// </summary>
 public class HistoryService : IHistoryService
 {
+    /// <summary>
+    /// Represents the repository interface for accessing and managing task history records.
+    /// </summary>
     private readonly IHistoryRepository _historyRepository;
 
+    /// <summary>
+    /// Service for managing and retrieving history entries associated with tasks.
+    /// </summary>
     public HistoryService(IHistoryRepository historyRepository)
     {
         _historyRepository = historyRepository;
     }
 
+    /// <summary>
+    /// Adds a new history entry for a specified task with a given description and associated data.
+    /// </summary>
+    /// <param name="taskId">The identifier of the task to which the history entry is related.</param>
+    /// <param name="description">A text description of the history entry.</param>
+    /// <param name="obj">An object containing properties that will be appended to the description. If it contains a 'UserId' property, it will be included in the history entry.</param>
+    /// <returns>A result indicating the success or failure of the operation.</returns>
     public async Task<Result> AddHistoryEntryAsync(int taskId, string description, object obj)
     {
         // Constrói a descrição com as propriedades de `obj`
@@ -62,6 +78,11 @@ public class HistoryService : IHistoryService
         }
     }
 
+    /// <summary>
+    /// Asynchronously retrieves the history records associated with a given task ID.
+    /// </summary>
+    /// <param name="taskId">The unique identifier of the task whose history is being retrieved.</param>
+    /// <returns>A task representing the asynchronous operation. The task result contains the list of history records related to the specified task ID.</returns>
     public async Task<List<History>> GetHistoryByTaskIdAsync(int taskId)
     {
         return await _historyRepository.GetHistoryByTaskIdAsync(taskId);

@@ -1,5 +1,8 @@
 namespace TaskManagerAPI.Core.Entities;
 
+/// <summary>
+/// Represents a comment made on a task in the TaskManager system.
+/// </summary>
 public class Comment
 {
     public int Id { get; set; }

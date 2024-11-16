@@ -33,7 +33,7 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=112c963e_002D2344_002D42f6_002D9cd6_002D8efc2bc66743/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Solution /&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=12163396_002D6a84_002D4795_002Db4b5_002Df9eea0c028ad/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution #7" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=12163396_002D6a84_002D4795_002Db4b5_002Df9eea0c028ad/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution #7" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Solution /&gt;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=178a04ad_002D294a_002D4270_002Dabc9_002De263b1e876a6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UpdateProject_ShouldReturnOk_WhenProjectWasUpdateSuccess" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
@@ -138,7 +138,7 @@
     &lt;TestId&gt;xUnit::CAB3DEDF-38A6-4BA6-946C-EDD5A368DB92::net8.0::TaskManagerAPI.Tests.ControllersTest.ProjectControllerTest.DeleteProject_ShouldReturnBadRequest_WhenProjectHaveTasksPending&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=cfba5406_002D750f_002D487b_002Dbb07_002D1c0e3be8bfb8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution #6" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=cfba5406_002D750f_002D487b_002Dbb07_002D1c0e3be8bfb8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution #6" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Solution /&gt;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d3322dd0_002D4a45_002D438a_002Da012_002Dcb6cc87d2f79/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UpdateProject_ShouldNotFound_WhenProjectWasNotFound #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;

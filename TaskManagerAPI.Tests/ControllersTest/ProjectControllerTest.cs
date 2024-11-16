@@ -13,14 +13,41 @@ using Xunit;
 
 namespace TaskManagerAPI.Tests.ControllersTest;
 
+/// <summary>
+/// Unit tests for the ProjectController class.
+/// </summary>
 public class ProjectControllerTest
 {
+    /// <summary>
+    /// A mock implementation of the <see cref="IProjectRepository"/> interface
+    /// used for unit testing the ProjectController.
+    /// </summary>
     private readonly Mock<IProjectRepository> _mockProjectRepository;
+
+    /// <summary>
+    /// Mock object for the AutoMapper instance used in ProjectControllerTest class.
+    /// </summary>
     private readonly Mock<IMapper> _mockMapper;
+
+    /// <summary>
+    /// A mock implementation of the <see cref="ITodoTaskRepository"/> interface used for testing purposes in the ProjectControllerTest class.
+    /// </summary>
     private readonly Mock<ITodoTaskRepository> _mockTodoTaskRepository;
+
+    /// <summary>
+    /// The ProjectController instance used to perform unit tests on the ProjectController class.
+    /// </summary>
     private readonly ProjectController _controller;
+
+    /// <summary>
+    /// An instance of the <see cref="IProjectService"/> that provides project-related operations
+    /// for the <see cref="ProjectControllerTest"/>.
+    /// </summary>
     private readonly IProjectService _projectService;
 
+    /// <summary>
+    /// Unit tests for the ProjectController.
+    /// </summary>
     public ProjectControllerTest()
     {
         _mockProjectRepository = new Mock<IProjectRepository>();
@@ -30,6 +57,11 @@ public class ProjectControllerTest
         _controller = new ProjectController(_projectService);
     }
 
+    /// <summary>
+    /// Generates a mock list of TodoTask objects for testing purposes.
+    /// </summary>
+    /// <param name="qtd">The quantity of TodoTask objects to generate.</param>
+    /// <returns>A list of TodoTask objects.</returns>
     private List<TodoTask> MockListTasks(int qtd)
     {
         var lstTasks = new List<TodoTask>();
@@ -52,7 +84,13 @@ public class ProjectControllerTest
 
         return lstTasks;
     }
-    
+
+    /// <summary>
+    /// Ensures that the GetProjectById action returns an Ok result when a project with the specified ID exists.
+    /// </summary>
+    /// <returns>
+    /// A task representing the asynchronous test operation.
+    /// </returns>
     [Fact]
     public async Task GetProjectById_ShouldReturnOk_WhenProjectExists()
     {
@@ -87,6 +125,14 @@ public class ProjectControllerTest
         Assert.Equal("Test Description", returnedProject.Description);
     }
 
+    /// <summary>
+    /// Verifies that the GetProjectById method returns a NotFound result
+    /// when the specified project does not exist.
+    /// </summary>
+    /// <returns>
+    /// A task representing the asynchronous test operation. The task result contains
+    /// an assertion that verifies the result is of type NotFoundObjectResult.
+    /// </returns>
     [Fact]
     public async Task GetProjectById_ShouldReturnNotFound_WhenProjectDoesNotExist()
     {
@@ -105,7 +151,13 @@ public class ProjectControllerTest
         // Assert
         Assert.IsType<NotFoundObjectResult>(result.Result);
     }
-    
+
+    /// <summary>
+    /// Tests that GetProjectsByUserId returns an Ok result when projects exist for the specified user.
+    /// </summary>
+    /// <returns>
+    /// A task that represents the asynchronous operation. The task result contains the OkObjectResult with a list of projects.
+    /// </returns>
     [Fact]
     public async Task GetProjectByUserId_ShouldReturnOk_WhenProjectExists()
     {
@@ -138,7 +190,12 @@ public class ProjectControllerTest
         Assert.Equal("Test Project", returnedProject[0].Name);
         Assert.Equal("Test Description", returnedProject[0].Description);
     }
-    
+
+    /// <summary>
+    /// Ensures that the GetProjectsByUserId method returns a NotFound result
+    /// when there are no tasks associated with the specified user ID.
+    /// </summary>
+    /// <returns>A NotFoundObjectResult if no projects are found for the user.</returns>
     [Fact]
     public async Task GetProjecByUserid_ReturnsNotFound_WhenTaskDoesNotExist()
     {
@@ -154,6 +211,10 @@ public class ProjectControllerTest
         Assert.IsType<NotFoundObjectResult>(result.Result);
     }
 
+    /// <summary>
+    /// Tests if creating a project successfully returns an Ok result.
+    /// </summary>
+    /// <returns>A task representing the asynchronous operation.</returns>
     [Fact]
     public async Task CreateProject_ShouldReturnOk_WhenProjectWasCreatedSuccess()
     {
@@ -173,7 +234,11 @@ public class ProjectControllerTest
         Assert.Equal(nameof(_controller.GetProjectById), result.ActionName);
         Assert.Equal(project, result.Value);
     }
-    
+
+    /// <summary>
+    /// Verifies that updating a project returns an Ok result when the project is successfully updated.
+    /// </summary>
+    /// <returns>NoContentResult if the project update is successful.</returns>
     [Fact]
     public async Task UpdateProject_ShouldReturnOk_WhenProjectWasUpdateSuccess()
     {
@@ -193,7 +258,12 @@ public class ProjectControllerTest
         // Assert
         Assert.IsType<NoContentResult>(result);
     }
-    
+
+    /// <summary>
+    /// Verifies that the UpdateProject method returns a NotFound result when the specified
+    /// project is not found in the repository.
+    /// </summary>
+    /// <returns>A task representing the asynchronous test operation.</returns>
     [Fact]
     public async Task UpdateProject_ShouldNotFound_WhenProjectWasNotFound()
     {
@@ -215,7 +285,11 @@ public class ProjectControllerTest
         Assert.Equal(404, notFoundResult.StatusCode);
         Assert.Equal("Project not found.", notFoundResult.Value);
     }
-    
+
+    /// <summary>
+    /// Tests if deleting a project returns an Ok result when the project was successfully deleted.
+    /// </summary>
+    /// <returns>An asynchronous task that represents the unit test.</returns>
     [Fact]
     public async Task DeleteProject_ShouldReturnOk_WhenProjectWasDeletedSuccess()
     {
@@ -238,7 +312,11 @@ public class ProjectControllerTest
         // Assert
         Assert.IsType<NoContentResult>(result);
     }
-    
+
+    /// <summary>
+    /// Ensures that attempting to delete a project with pending tasks returns a BadRequest result.
+    /// </summary>
+    /// <returns>A BadRequestObjectResult indicating that the project cannot be deleted due to pending tasks.</returns>
     [Fact]
     public async Task DeleteProject_ShouldReturnBadRequest_WhenProjectHaveTasksPending()
     {
@@ -265,7 +343,14 @@ public class ProjectControllerTest
                      "tasks associated with the project before attempting to delete it.", 
             (result.Value as dynamic).Message);
     }
-    
+
+    /// <summary>
+    /// Tests that the DeleteProject method returns a BadRequest result
+    /// when the project to be deleted is not found.
+    /// </summary>
+    /// <returns>
+    /// A Task representing the asynchronous operation, with a BadRequest result if the project is not found.
+    /// </returns>
     [Fact]
     public async Task DeleteProject_ShouldReturnBadRequest_WhenProjectNotFound()
     {

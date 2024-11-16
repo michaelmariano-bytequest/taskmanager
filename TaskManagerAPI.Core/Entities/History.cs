@@ -1,5 +1,8 @@
 namespace TaskManagerAPI.Core.Entities;
 
+/// <summary>
+/// Represents a history record for a task in the task manager system.
+/// </summary>
 public class History
 {
     public int Id { get; set; }

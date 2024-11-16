@@ -6,15 +6,29 @@ using TaskManagerAPI.Infrastructure.Interfaces;
 
 namespace TaskManagerAPI.Infrastructure.Repositories;
 
+/// <summary>
+/// Provides methods for accessing and managing task history records in the repository.
+/// </summary>
 public class HistoryRepository : IHistoryRepository
 {
+    /// <summary>
+    /// Provides access to SQL data operations for the repository.
+    /// </summary>
     private readonly ISqlDataAccess _dataAccess;
 
+    /// <summary>
+    /// Repository for accessing and managing task history records.
+    /// </summary>
     public HistoryRepository(ISqlDataAccess dataAccess)
     {
         _dataAccess = dataAccess;
     }
 
+    /// <summary>
+    /// Retrieves the history associated with a specific task by its task ID.
+    /// </summary>
+    /// <param name="taskId">The ID of the task for which history records are to be retrieved.</param>
+    /// <returns>A task representing an asynchronous operation that returns a list of history records.</returns>
     public async Task<List<History>> GetHistoryByTaskIdAsync(int taskId)
     {
         var sql = "SELECT * FROM task_manager.history WHERE taskid = @TaskId ORDER BY modifiedat DESC";
@@ -25,6 +39,11 @@ public class HistoryRepository : IHistoryRepository
         return await _dataAccess.QueryAsync<History>(sql, parameters);
     }
 
+    /// <summary>
+    /// Asynchronously adds a history record to the database.
+    /// </summary>
+    /// <param name="history">The history record to be added. This includes details such as task ID, description, modification date, and user ID.</param>
+    /// <returns>A Task representing the asynchronous operation.</returns>
     public async Task AddHistoryAsync(History history)
     {
         var sql = "INSERT INTO task_manager.history (taskid, description, modifiedat, userid) " +

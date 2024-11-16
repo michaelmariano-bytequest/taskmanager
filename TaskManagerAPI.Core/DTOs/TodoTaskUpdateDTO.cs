@@ -2,6 +2,9 @@ using TaskManagerAPI.Core.Enums;
 
 namespace TaskManagerAPI.Core.DTOs;
 
+/// <summary>
+/// Data Transfer Object for updating a ToDo task.
+/// </summary>
 public class TodoTaskUpdateDTO
 {
     public int Id { get; set; }

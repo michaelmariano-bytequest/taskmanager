@@ -5,16 +5,21 @@ using TaskManagerAPI.Services.Interfaces;
 
 namespace TaskManagerAPI.Controllers
 {
+    /// <summary>
+    /// Controller for managing projects in the Task Manager API.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class ProjectController : ControllerBase
     {
+        /// <summary>
+        /// Service for accessing and managing project data.
+        /// </summary>
         private readonly IProjectService _projectService;
 
         /// <summary>
-        /// Initializes a new instance of the ProjectController class.
+        /// Handles HTTP requests related to projects.
         /// </summary>
-        /// <param name="projectService">Service for managing projects.</param>
         public ProjectController(IProjectService projectService)
         {
             _projectService = projectService;
@@ -47,7 +52,7 @@ namespace TaskManagerAPI.Controllers
         public async Task<ActionResult<List<Project>>> GetProjectsByUserId(int userId)
         {
             var result = await _projectService.GetProjectsByUserIdAsync(userId);
-            
+
             if (!result.IsSuccess)
                 return NotFound(new { Message = result.ErrorMessage });
             else
@@ -81,7 +86,7 @@ namespace TaskManagerAPI.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult> UpdateProject(int id, [FromBody] Project project)
         {
-            project.Id = id; 
+            project.Id = id;
             var result = await _projectService.UpdateProjectAsync(project);
 
             if (!result.IsSuccess)

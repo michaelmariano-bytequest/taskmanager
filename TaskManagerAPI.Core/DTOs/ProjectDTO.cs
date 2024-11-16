@@ -2,6 +2,9 @@ using TaskManagerAPI.Core.Enums;
 
 namespace TaskManagerAPI.Core.DTOs;
 
+/// <summary>
+/// Data Transfer Object representing a project.
+/// </summary>
 public class ProjectDTO
 {
     public int Id { get; set; }

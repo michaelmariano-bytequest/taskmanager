@@ -1,13 +1,10 @@
 namespace TaskManagerAPI.Core.DTOs
 {
+    /// <summary>
+    /// Data Transfer Object for encapsulating the performance report.
+    /// </summary>
     public class PerformanceReportDTO
     {
         public List<UserPerformanceDTO> Data { get; set; }
-    }
-
-    public class UserPerformanceDTO
-    {
-        public int UserId { get; set; }
-        public double AvgCompletedTasksPerDay { get; set; }
     }
 }

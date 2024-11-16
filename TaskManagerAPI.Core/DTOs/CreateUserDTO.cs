@@ -1,5 +1,8 @@
 namespace TaskManagerAPI.Core.DTOs;
 
+/// <summary>
+/// DTO for creating a new user.
+/// </summary>
 public class CreateUserDTO
 {
     public string Name { get; set; }
